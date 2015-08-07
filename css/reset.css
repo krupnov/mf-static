@@ -1,0 +1,138 @@
+/* ------- reset styles -------- */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+	background: transparent;
+	border: 0;
+	font-size: 100%;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body { line-height: 1; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+nav ul { list-style: none; }
+blockquote,q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: none; }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: pointer; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input,select { vertical-align: middle; }
+
+/* ---------------- PAGE DEFAULTS ------------------- */
+body {
+	background: #ffffff;
+	color: #000000;
+	font-size: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------- HEADER ---------------------- */
+header {
+	background: #25262d;
+	height: 80px;
+	width: 100%;
+}
+
+header .header-content {
+	line-height: 80px;
+	padding: 0 20px;
+	width: auto;
+}
+
+.header-content div.logo {
+	display: inline-block;
+	float: left;
+	font-family: 'Scada', sans-serif;
+	font-size: 21px;
+	vertical-align: top;
+}
+
+.header-content div.logo a {
+	color: #ffe89b;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ---------------- NAVIGATION ---------------------- */
+nav {
+	display: inline-block;
+	font-family: 'Scada', sans-serif;
+	font-size: 0px;
+	line-height: 80px;
+	margin-left: 20px;
+	vertical-align: top;
+}
+
+nav li {
+	display: inline-block;
+	height: 80px;
+	margin-left: 20px;
+	vertical-align: top;
+}
+
+nav li:first-child { margin-left: 0px; }
+
+nav li a {
+	color: #ffe89b;
+	font-size: 21px;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ---------------- USER BAR ---------------------- */
+div.user-bar {
+	display: inline-block;
+	font-family: 'Scada', sans-serif;
+	font-size: 21px;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	vertical-align: top;
+}
+
+div.user-bar a {
+	color: #ffe89b;
+	font-size: 21px;
+	font-weight: 400;
+	margin-left: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ---------------- CONTENT ---------------------- */
+div.content { display: block; }
+
+/* ---------------- FOOTER ---------------------- */
+footer {
+	background: #3f404d;
+	display: block;
+	color: #f2f2f2;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	padding: 0 20px;
+}
+footer .footer-content {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	max-width: 1158px;
+	padding: 20px 0;
+	position: relative;
+	width: 100%;
+}
+.footer-content .right { position: absolute; right: 0; top: 20px; }
+.footer-content .right a { color: #f2f2f2; text-decoration: none; }
+
+/* ---------------- STATISTICS ---------------------- */
+div.statistics { display: none; }

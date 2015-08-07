@@ -1,0 +1,18 @@
+.submit { text-align: center; width: 100%; }
+.submit input[type="submit"], .submit a {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: #ffe89b;
+	border: 0px;
+	border-bottom: 3px solid #cda349;
+	border-radius: 10px;
+	color: #6c301e;
+	font-size: 18px;
+	line-height: 53px;
+	margin-top: 48px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 320px;
+}
+.submit input[type="submit"]:hover { cursor: pointer; }
+.submit a { cursor: pointer; display: block; text-decoration: none; }

@@ -1,0 +1,27 @@
+/* ----------- FROM 320 TO 767 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	div.login-cover { max-width: 362px; }
+	div.login-block { margin-top: 10px; }
+	div.login-block .field { width: 100%; }
+	
+	div.login-block .field input {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		width: 100%;
+	}
+	.submit input[type="submit"] {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		font-size: 14px;
+		width: 100% !important;
+	}
+	
+	.submit a { width: 280px; }
+}
+
+/* ----------- FROM 320 TO 361 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 361px) {
+	.submit a { font-size: 14px; width: 100%; }
+}

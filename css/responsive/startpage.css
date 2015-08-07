@@ -1,0 +1,44 @@
+/* ----------- FROM 768 TO 1024  ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.promo-cover { padding-bottom: 192px; }
+	.promo-info .logo { margin-top: 188px; }
+	.promo-slider { margin-top: 250px; }
+	
+	.news-list article {
+		margin-left: 3%;
+		max-width: 48.47%;
+		width: 100%;
+	}
+	.news-list article:nth-child(2n+1) { margin-left: 0px; }
+}
+
+/* ----------- FROM 320 TO 767  ----------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.promo-cover { padding-bottom: 50px; }
+	.promo-info, .promo-slider {
+		margin-left: 0px;
+		max-width: 100%;
+		width: 100%;
+	}
+	.promo-info .logo { margin-top: 40px; }
+	.promo-slider { margin: 40px 0 0; }
+	
+	.news-list article {
+		max-width: 100%;
+		margin-left: 0px;
+		width: 100%;
+	}
+	.news-list article:last-child { margin-bottom: 0px; }
+}
+
+/* ----------- FROM 320 TO 736  ----------- */
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+	.steps-list article {
+		display: block;
+		max-width: 568px;
+		margin: 0px auto 40px;
+		width: 100%;
+	}
+	.steps-list article:first-child { margin-left: auto; }
+	.steps-list article:last-child { margin-bottom: 0px; }
+}
