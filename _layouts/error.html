@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+	<body class="errors">
+		<div class="error-content-cover">
+			<div class="error-content">
+				<img src="{{ page.errorImage | prepend: site.url }}" height="220" width="220" alt="{{ page.title }}" />
+				<h1>{{ page.errorHeader }}</h1>
+				<p>{{ page.errorText }}<br />
+					Вернуться на <a href="{{ site.url }}">главную страницу</a></p>
+			</div>
+		</div>
+	</body>
+
+</html>
