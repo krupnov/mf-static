@@ -12,3 +12,6 @@ github_username:  krupnov
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - octopress-paginate
