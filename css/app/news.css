@@ -1,0 +1,62 @@
+div.post-list {
+	margin-left: -20px;
+}
+
+div.post-list article {
+	border: 1px solid #e6e6e6;
+	display: inline-block;
+	margin: 19px 0px 0px 20px;
+	padding: 20px 20px;
+	vertical-align: top;
+	width: 313px;
+}
+
+div.show time {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #fbcc34;
+	color: #fbcc34;
+	font-size: 11px;
+	font-weight: 300;
+	height: 19px;
+	line-height: 19px;
+	margin-top: 26px;
+	padding: 0px 10px;
+}
+
+div.post-list article h2 {
+	color: #cda349;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+div.post-list article h2 a { color: #cda349; text-decoration: none; }
+div.post-list article div.post-description {
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 17px;
+}
+
+div.pagination {
+	font-size: 18px;
+	margin-top: 30px;
+	text-align: center;
+}
+div.pagination span { color: #6c301e; }
+div.pagination a { color: #cda349; text-decoration: none; }
+
+/*----- SHOW POST ----*/
+div.show h1.post-heading {
+	color: #cda349;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 11px;
+	text-transform: none;
+}
+div.show div.post-text {
+	font-size: 15px;
+	font-weight: 300;
+}
+div.show div.post-text p {
+	margin-top: 23px;
+}

@@ -23,15 +23,20 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 input,select { vertical-align: middle; }
 
 /* ---------------- PAGE DEFAULTS ------------------- */
+html, body { height: 100%; width: 100%; }
 body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 	background: #ffffff;
 	color: #000000;
-	font-size: 100%;
 	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
 	font-weight: 600;
+	height: 100%;
+	height: auto !important;
+	min-height: 100%;
 	overflow-y: scroll;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	position: relative;
 }
 
 /* ---------------- HEADER ---------------------- */
@@ -73,9 +78,12 @@ nav {
 
 nav li {
 	display: inline-block;
+	font-size: 21px;
+	font-weight: 400;
 	height: 80px;
 	margin-left: 20px;
 	vertical-align: top;
+	text-transform: uppercase;
 }
 
 nav li:first-child { margin-left: 0px; }
@@ -83,10 +91,9 @@ nav li:first-child { margin-left: 0px; }
 nav li a {
 	color: #ffe89b;
 	font-size: 21px;
-	font-weight: 400;
 	text-decoration: none;
-	text-transform: uppercase;
 }
+nav li.current, nav li a:hover { color: #fbcc34; }
 
 /* ---------------- USER BAR ---------------------- */
 div.user-bar {
@@ -109,16 +116,46 @@ div.user-bar a {
 }
 
 /* ---------------- CONTENT ---------------------- */
-div.content { display: block; }
+div.content {
+	padding-bottom: 54px;
+}
+div.content-cover {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 0px auto;
+	max-width: 1240px;
+	padding: 50px 20px;
+	position: relative;
+}
+div.content-cover h1 {
+	font-family: 'Scada', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+div.content-wrapper {
+	background: #ffffff;
+	display: block;
+}
+div.show {
+	color: #25262d;
+	font-size: 0px;
+	padding: 50px 40px;
+}
 
 /* ---------------- FOOTER ---------------------- */
 footer {
 	background: #3f404d;
-	display: block;
+	bottom: 0;
 	color: #f2f2f2;
+	display: block;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	padding: 0 20px;
+	height: 54px;
+	position: absolute;
+	width: 100%;
 }
 footer .footer-content {
 	box-sizing: border-box;
@@ -126,11 +163,12 @@ footer .footer-content {
 	-moz-box-sizing: border-box;
 	display: block;
 	margin: 0 auto;
-	max-width: 1158px;
+	max-width: 1200px;
 	padding: 20px 0;
 	position: relative;
 	width: 100%;
 }
+.footer-content .left { margin-left: 20px; }
 .footer-content .right { position: absolute; right: 0; top: 20px; }
 .footer-content .right a { color: #f2f2f2; text-decoration: none; }
 

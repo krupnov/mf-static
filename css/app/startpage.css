@@ -3,7 +3,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-webkit-background-size: cover;
-	background: url('../images/img.jpg');
+	background: url('../../images/img.jpg');
 	background-size: cover;
 	background-position: center center;
 }
@@ -11,9 +11,8 @@
 	font-size: 0px;
 	margin: 0 auto;
 	max-width: 1118px;
-	padding: 0px 20px 100px;
+	padding: 0px 20px 80px;
 }
-
 .promo-info, .promo-slider {
 	display: inline-block;
 	vertical-align: top;
@@ -45,7 +44,6 @@
 	max-width: 39.35%;
 	width: 100%;
 }
-
 .amount, .time { max-width: 100%; width: 100%; }
 .time { margin-top: 35px; }
 
@@ -59,7 +57,7 @@
 .noUi-origin { background: #f4e09c; border-radius: 4px; }
 
 #slider-amount .noUi-handle {
-	background: url('../images/amount-btn.png');
+	background: url('../../images/amount-btn.png');
 	box-shadow: none;
 	border: none;
 	width: 25px;
@@ -67,7 +65,7 @@
 }
 
 #slider-time .noUi-handle {
-	background: url('../images/time-btn.png');
+	background: url('../../images/time-btn.png');
 	box-shadow: none;
 	border: none;
 	width: 25px;

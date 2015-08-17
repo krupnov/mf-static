@@ -3,7 +3,7 @@ body.auth-block {
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-image: url('../images/login-bg.jpg');
+	background-image: url('../../images/login-bg.jpg');
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -35,14 +35,6 @@ div.login-block {
 	margin-top: 100px;
 	padding: 32px 40px;
 	max-width: 320px;
-}
-
-div.signup-block {
-	margin-top: 50px;
-}
-
-div.passwordrestore-block {
-	margin-top: 80px;
 }
 
 div.login-block h2 {
