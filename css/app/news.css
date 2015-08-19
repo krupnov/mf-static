@@ -4,11 +4,15 @@ div.post-list {
 
 div.post-list article {
 	border: 1px solid #e6e6e6;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	display: inline-block;
-	margin: 19px 0px 0px 20px;
+	margin: 19px 0px 0px 1.75438596%;
 	padding: 20px 20px;
 	vertical-align: top;
-	width: 313px;
+	max-width: 31.5789474%;
+	width: 100%;
 }
 
 div.show time {

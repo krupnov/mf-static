@@ -1,0 +1,19 @@
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+	div.post-list { margin-left: 0px; }
+	div.post-list article {
+		margin-left: 2.2123893%;
+		max-width: 48.8938053%;
+		width: 100%;
+	}
+	div.post-list article:nth-child(2n+1) { margin-left: 0px; }
+}
+
+@media only screen and (max-width: 667px) {
+	div.post-list { margin-left: 0px; }
+	div.post-list article {
+		border-width: 0px 0px 1px 0px;
+		margin-left: 0px;
+		max-width: 100%;
+		padding: 20px 0px;
+	}
+}

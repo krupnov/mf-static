@@ -10,7 +10,7 @@
 .promo-cover {
 	font-size: 0px;
 	margin: 0 auto;
-	max-width: 1118px;
+	max-width: 1120px;
 	padding: 0px 20px 80px;
 }
 .promo-info, .promo-slider {
@@ -91,11 +91,11 @@
 
 .promo-slider .order-btn { margin-top: 40px; text-align: center; }
 
-/* ---------------- NEWS LIST ---------------------- */
+/* ---------------- STEPS LIST ---------------------- */
 .steps { background: #2e2f38; }
 .steps-content {
 	margin: 0 auto;
-	max-width: 1118px;
+	max-width: 1120px;
 	padding: 20px 20px 40px;
 }
 .steps-list { display: block; font-size: 0px; }
@@ -125,7 +125,7 @@
 /* ---------------- NEWS LIST ---------------------- */
 .news {
 	margin: 0 auto 57px auto;
-	max-width: 1118px;
+	max-width: 1120px;
 	padding: 0 20px;
 }
 .news h2 {
