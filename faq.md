@@ -2,6 +2,7 @@
 layout: page
 title: Несколько самых часто задаваемых вопросов
 permalink: /faq/
+area: faq
 ---
 
 <div class="faq-text">

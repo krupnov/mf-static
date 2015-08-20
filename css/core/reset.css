@@ -93,7 +93,8 @@ nav li a {
 	font-size: 21px;
 	text-decoration: none;
 }
-nav li.current, nav li a:hover { color: #fbcc34; }
+nav li.current a, nav li a:hover { color: #fbcc34; }
+nav li.current a { cursor: default; }
 
 /* ---------------- USER BAR ---------------------- */
 div.user-bar {
