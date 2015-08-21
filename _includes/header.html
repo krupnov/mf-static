@@ -1,20 +1,18 @@
-<header>
-	<div class="header-content">
-		<div class="logo">
-			<a href="{{ site.baseurl }}/">FL</a>
-		</div>
-		<div class="user-bar">
-			<a href="{{ site.lkurl }}/home" class="show-login-popup" rel="nofollow"><i class="fa fa-user"></i> Войти</a>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#">О займах</a></li>
-				<li {% include functions/selected_area.html area="about" %}><a href="{{ site.baseurl }}/about/">О компании</a></li>
-				<li {% include functions/selected_area.html area="offers" %}><a href="{{ site.baseurl }}/offers/">Акции</a></li>
-				<li {% include functions/selected_area.html area="news" %}><a href="{{ site.baseurl }}/news/">Новости</a></li>
-				<li {% include functions/selected_area.html area="faq" %}><a href="{{ site.baseurl }}/faq/">FAQ</a></li>
-				<li {% include functions/selected_area.html area="contacts" %}><a href="{{ site.baseurl }}/contacts/">Контакты</a></li>
-			</ul>
-		</nav>
+<header class="header-content">
+	<div class="logo">
+		<a href="{{ site.baseurl }}/">FL</a>
 	</div>
+	<div class="user-bar">
+		<a href="{{ site.lkurl }}/home" class="show-login-popup" rel="nofollow"><i class="fa fa-user"></i> Войти</a>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#">О займах</a></li>
+			<li {% include functions/selected_area.html area="about" %}><a href="{{ site.baseurl }}/about/">О компании</a></li>
+			<li {% include functions/selected_area.html area="offers" %}><a href="{{ site.baseurl }}/offers/">Акции</a></li>
+			<li {% include functions/selected_area.html area="news" %}><a href="{{ site.baseurl }}/news/">Новости</a></li>
+			<li {% include functions/selected_area.html area="faq" %}><a href="{{ site.baseurl }}/faq/">FAQ</a></li>
+			<li {% include functions/selected_area.html area="contacts" %}><a href="{{ site.baseurl }}/contacts/">Контакты</a></li>
+		</ul>
+	</nav>
 </header>

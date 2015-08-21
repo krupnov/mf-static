@@ -40,13 +40,11 @@ body {
 }
 
 /* ---------------- HEADER ---------------------- */
-header {
+
+.header-content {
 	background: #25262d;
 	height: 80px;
 	width: 100%;
-}
-
-header .header-content {
 	line-height: 80px;
 	padding: 0 20px;
 	width: auto;
