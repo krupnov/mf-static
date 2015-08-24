@@ -1,0 +1,26 @@
+/* ---------------- HEADINGS ---------------------- */
+div.content-cover h1 {
+	font-family: 'Scada', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+div.show h1.post-heading {
+	color: #cda349;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 11px;
+	text-transform: none;
+}
+
+/* ---------------- TEXT ---------------------- */
+div.show div.text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	margin-top: 6px;
+}
+div.show div.text p { padding-top: 20px; }
+div.show div.text a { color: #25262d; }
+div.show div.text a:hover { text-decoration: none; }
+
+div.show div.text i { color: #cda349; padding-right: 7px; }

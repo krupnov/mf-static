@@ -1,6 +1,4 @@
-div.post-list {
-	margin-left: -20px;
-}
+div.post-list { margin-left: -20px; }
 
 div.post-list article {
 	border: 1px solid #e6e6e6;
@@ -49,18 +47,3 @@ div.pagination {
 }
 div.pagination span { color: #6c301e; }
 div.pagination a { color: #cda349; text-decoration: none; }
-
-/*----- SHOW POST ----*/
-div.show h1.post-heading {
-	color: #cda349;
-	font-family: 'Roboto', sans-serif;
-	margin-top: 11px;
-	text-transform: none;
-}
-div.show div.post-text {
-	font-size: 15px;
-	font-weight: 300;
-}
-div.show div.post-text p {
-	margin-top: 23px;
-}

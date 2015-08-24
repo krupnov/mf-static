@@ -1,4 +1,5 @@
 @import "core/reset.css" all;
+@import "core/typographi.css" all;
 @import "app/startpage.css" all;
 @import "app/auth.css" all;
 @import "app/errors.css" all;
