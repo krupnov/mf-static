@@ -13,20 +13,6 @@ div.post-list article {
 	width: 100%;
 }
 
-div.show time {
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	border: 1px solid #fbcc34;
-	color: #fbcc34;
-	font-size: 11px;
-	font-weight: 300;
-	height: 19px;
-	line-height: 19px;
-	margin-top: 26px;
-	padding: 0px 10px;
-}
-
 div.post-list article h2 {
 	color: #cda349;
 	font-size: 24px;

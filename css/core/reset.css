@@ -131,10 +131,8 @@ div.content-cover {
 
 div.content-wrapper {
 	background: #ffffff;
-	display: block;
-}
-div.show {
 	color: #25262d;
+	display: block;
 	font-size: 0px;
 	padding: 50px 40px;
 }
