@@ -40,17 +40,16 @@ body {
 }
 
 /* ---------------- HEADER ---------------------- */
-
-.header-content {
+header {
 	background: #25262d;
-	height: 80px;
+	height: 60px;
 	width: 100%;
-	line-height: 80px;
+	line-height: 60px;
 	padding: 0 20px;
 	width: auto;
 }
 
-.header-content div.logo {
+header div.logo {
 	display: inline-block;
 	float: left;
 	font-family: 'Scada', sans-serif;
@@ -58,7 +57,7 @@ body {
 	vertical-align: top;
 }
 
-.header-content div.logo a {
+header div.logo a {
 	color: #ffe89b;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -69,7 +68,7 @@ nav {
 	display: inline-block;
 	font-family: 'Scada', sans-serif;
 	font-size: 0px;
-	line-height: 80px;
+	line-height: 60px;
 	margin-left: 20px;
 	vertical-align: top;
 }
@@ -78,7 +77,7 @@ nav li {
 	display: inline-block;
 	font-size: 21px;
 	font-weight: 400;
-	height: 80px;
+	height: 60px;
 	margin-left: 20px;
 	vertical-align: top;
 	text-transform: uppercase;

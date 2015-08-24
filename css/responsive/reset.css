@@ -1,16 +1,9 @@
-@media only screen and (max-width: 1024px) {
-	header { height: 60px; }
-	header .header-content { line-height: 60px; }
-	nav { line-height: 60px; }
-	nav li { height: 60px; }
-}
-
 @media only screen and (max-width: 830px) {
-	header .header-content { text-align: center; }
+	header { text-align: center; }
 	
-	header .header-content div.logo { float: none; position: relative; }
+	header div.logo { float: none; position: relative; }
 	
-	.header-content nav {
+	header nav {
 		height: 0;
 		left: 0;
 		margin-left: 0px;
@@ -19,7 +12,7 @@
 		right: 0;
 		top: 60px;
 	}
-	.header-content nav li { margin-left: 0px; width: 100%; }
+	header nav li { margin-left: 0px; width: 100%; }
 }
 
 @media only screen and (max-width: 480px) {
