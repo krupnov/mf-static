@@ -9,5 +9,5 @@ body.page-content {
 	background-size: cover;
 }
 
-div.page div.text div.faq-text h2 { margin-top: 39px; }
-div.page div.text div.faq-text p { padding-top: 9px; }
+div.faq-text h2 { margin-top: 39px; }
+div.faq-text p { padding-top: 9px; }
