@@ -1,26 +1,21 @@
-div.post-list { margin-left: -20px; }
-
-div.post-list article {
-	border: 1px solid #e6e6e6;
+div.content-wrapper article {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	display: inline-block;
-	margin: 19px 0px 0px 1.75438596%;
-	padding: 20px 20px;
+	margin: 27px 0px 0px 0px;
 	vertical-align: top;
-	max-width: 31.5789474%;
 	width: 100%;
 }
 
-div.post-list article h2 {
+div.content-wrapper article h2 {
 	color: #cda349;
 	font-size: 24px;
 	font-weight: 400;
 	margin-top: 10px;
 }
-div.post-list article h2 a { color: #cda349; text-decoration: none; }
-div.post-list article div.post-description {
+div.content-wrapper article h2 a { color: #cda349; text-decoration: none; }
+div.content-wrapper article div.post-description {
 	font-size: 12px;
 	font-weight: 300;
 	margin-top: 17px;

@@ -6,17 +6,15 @@ area: news
 ---
 <h1 class="page-heading">Новости</h1>
 
-<div class="post-list">
-	{% for post in paginator.posts %}
-	<article class="post">
-		<div class="post-meta"><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
-		<h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-		<div class="post-description">
-			12 июня – День России. К празднику FL снова запускает ставший традиционным и любимый многими конкурс, претерпевший небольшие изменения и получивший новое название.
-		</div>
-	</article>
-	{% endfor %}
-</div>
+{% for post in paginator.posts %}
+<article class="post">
+	<div class="post-meta"><time>{{ post.date | date: "%b %-d, %Y" }}</time></div>
+	<h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+	<div class="post-description">
+		12 июня – День России. К празднику FL снова запускает ставший традиционным и любимый многими конкурс, претерпевший небольшие изменения и получивший новое название.
+	</div>
+</article>
+{% endfor %}
 
 <div class="pagination">
   {% if paginator.previous_page %}
