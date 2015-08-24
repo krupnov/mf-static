@@ -145,7 +145,6 @@ footer {
 	display: block;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	height: 54px;
 	position: absolute;
 	width: 100%;
 }
@@ -161,7 +160,7 @@ footer .footer-content {
 	width: 100%;
 }
 .footer-content .left { margin-left: 20px; }
-.footer-content .right { position: absolute; right: 0; top: 20px; }
+.footer-content .right { position: absolute; right: 20px; top: 20px; }
 .footer-content .right a { color: #f2f2f2; text-decoration: none; }
 
 /* ---------------- STATISTICS ---------------------- */
