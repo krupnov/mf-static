@@ -1,4 +1,10 @@
 $(document).on('ready page:load', function() {
+	var jPM = $.jPanelMenu({
+		trigger: '.nav-btn-conteiner'
+	});
+	jPM.on();
+	
+	
 //$(document).ready(function() {
 	var amount_options = {
 		start: 0,

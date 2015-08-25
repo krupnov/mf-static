@@ -1,5 +1,6 @@
 @import "core/reset.css" all;
 @import "core/typographi.css" all;
+@import "core/mobile-nav.css" all;
 @import "app/startpage.css" all;
 @import "app/auth.css" all;
 @import "app/errors.css" all;
@@ -8,6 +9,5 @@
 @import "app/news.css" all;
 @import "third_party/formtastic.css" all;
 @import "third_party/chosen.css" all;
-@import "third_party/font-awesome.min.css" all;
 @import "third_party/slider.css" all;
 @import "responsive/media.css" all;
