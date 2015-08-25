@@ -26,14 +26,14 @@ div.content-wrapper h1.post-heading {
 }
 
 /* ---------------- TEXT ---------------------- */
-div.content-wrapper div.text {
+div.content-wrapper article.text {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	margin-top: 6px;
 }
-div.content-wrapper div.text p { padding-top: 20px; }
-div.content-wrapper div.text a { color: #25262d; }
-div.content-wrapper div.text a:hover { text-decoration: none; }
+div.content-wrapper article.text p { padding-top: 20px; }
+div.content-wrapper article.text a { color: #25262d; }
+div.content-wrapper article.text a:hover { text-decoration: none; }
 
-div.content-wrapper div.text i { color: #cda349; padding-right: 7px; }
+div.content-wrapper article.text i { color: #cda349; padding-right: 7px; }
