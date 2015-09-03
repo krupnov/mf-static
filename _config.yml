@@ -4,7 +4,7 @@ email: krupnov.iv@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Сервис микрофинансирования, основанный на доверии.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.finlig.ru" # the base hostname & protocol for your site
+url: "https://www.finlig.ru" # the base hostname & protocol for your site
 lkurl: "http://my.finlig.ru" # the base hostname & protocol for dynamic part site
 
 twitter_username: krupnov
