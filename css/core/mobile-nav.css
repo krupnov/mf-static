@@ -1,19 +1,4 @@
 /* ---------------- MOBILE NAVIGATION ---------------------- */
-.jPanelMenu-panel {
-	background-attachment: scroll;
-	background-clip: border-box;
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	background-size: auto;
-	background: none !important;
-	left: 0;
-	min-height: 100%;
-	position: static;
-	top: 0;
-	width: 100%;
-	z-index: 2;
-}
 header a.nav-btn-conteiner {
 	color: #ffe89b;
 	display: none;
@@ -24,21 +9,68 @@ header a.nav-btn-conteiner {
 	vertical-align: top;
 }
 
-div.aside-nav-hover {
-	background: #25262d;
-	padding: 15px 40px;
+.sidr {
+	-moz-box-shadow: inset 0 0 5px 5px #222;
+	-webkit-box-shadow: inset 0 0 5px 5px #222;
+	background :#333;
+	box-shadow: inset 0 0 5px 5px #222;
+	color: #fff;
+	display: none;
+	font-size: 15px;
+	height: 100%;
+	overflow-x: none;
+	overflow-y: auto;
+	position: absolute;
+	position: fixed;
+	top: 0;
+	width: 260px;
+	z-index: 999999;
+}
+.sidr .sidr-inner { padding: 0 0 15px; }
+.sidr.left { left: -260px; right: auto; }
+.sidr #btn-close {
+	border-bottom: 1px solid #1a1a1a;
+	border-top: 1px solid #4d4d4d;
+	color: #ffe89b;
+	display: block;
+	height: 58px;
+	line-height: 60px;
+	padding: 0 15px;
+	font-size: 24px;
+	margin: 0;
 }
 
-div.aside-nav-hover nav {
-	height: 100%;
-	left: 40px;
-	margin-left: 0px;
-}
-div.aside-nav-hover li {
+.sidr nav {
 	display: block;
-	height: 50px;
-	line-height: 50px;
-	margin-left: 0px;
-	text-align: left;
-	width: 100%;
+	margin: 0 0 15px;
+	padding: 0;
+	border-bottom: 1px solid #4d4d4d;
+}
+
+.sidr nav li {
+	border-bottom: 1px solid #1a1a1a;
+	border-top: 1px solid #4d4d4d;
+	display: block;
+	height: 58px;
+	line-height: 60px;
+	margin: 0;
+}
+
+.sidr nav li:hover, .sidr nav li.active, .sidr nav li.sidr-class-active {
+	border-top: none;
+	line-height: 58px;
+}
+
+.sidr nav li:hover>a, .sidr nav li:hover>span, .sidr nav li.active>a, .sidr nav li.active>span,
+.sidr nav li.sidr-class-active>a, .sidr nav li.sidr-class-active>span {
+	-webkit-box-shadow: inset 0 0 15px 3px #222;
+	-moz-box-shadow: inset 0 0 15px 3px #222;
+	box-shadow: inset 0 0 15px 3px #222;
+}
+
+.sidr nav li a {
+	display: block;
+	line-height: 60px;
+	padding: 0 15px;
+	text-decoration: none;
 }

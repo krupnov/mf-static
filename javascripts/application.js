@@ -1,9 +1,22 @@
 $(document).on('ready page:load', function() {
-	var jPM = $.jPanelMenu({
-		trigger: '.nav-btn-conteiner'
+	$('#mobile-nav').sidr({
+		displace: false,
+		onOpen: function(name) {
+			$('html, body').css({
+				'overflow': 'hidden',
+				'height': '100%'
+			})
+		},
+		onClose: function(name) {
+			$('html, body').css({
+				'overflow': 'auto',
+				'height': 'auto'
+			})
+		},
 	});
-	jPM.on();
-	
+	$('#btn-close').click(function(){
+		$.sidr('close', 'sidr');
+	});
 	
 //$(document).ready(function() {
 	var amount_options = {
