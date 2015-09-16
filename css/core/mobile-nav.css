@@ -40,14 +40,14 @@ header a.nav-btn-conteiner {
 	margin: 0;
 }
 
-.sidr nav {
+.sidr ul {
 	display: block;
 	margin: 0 0 15px;
 	padding: 0;
 	border-bottom: 1px solid #4d4d4d;
 }
 
-.sidr nav li {
+.sidr ul li {
 	border-bottom: 1px solid #1a1a1a;
 	border-top: 1px solid #4d4d4d;
 	display: block;
@@ -56,19 +56,19 @@ header a.nav-btn-conteiner {
 	margin: 0;
 }
 
-.sidr nav li:hover, .sidr nav li.active, .sidr nav li.sidr-class-active {
+.sidr ul li:hover, .sidr nav li.active, .sidr nav li.sidr-class-active {
 	border-top: none;
 	line-height: 58px;
 }
 
-.sidr nav li:hover>a, .sidr nav li:hover>span, .sidr nav li.active>a, .sidr nav li.active>span,
-.sidr nav li.sidr-class-active>a, .sidr nav li.sidr-class-active>span {
+.sidr ul li:hover>a, .sidr nav li:hover>span, .sidr nav li.active>a, .sidr nav li.active>span,
+.sidr ul li.sidr-class-active>a, .sidr nav li.sidr-class-active>span {
 	-webkit-box-shadow: inset 0 0 15px 3px #222;
 	-moz-box-shadow: inset 0 0 15px 3px #222;
 	box-shadow: inset 0 0 15px 3px #222;
 }
 
-.sidr nav li a {
+.sidr ul li a {
 	display: block;
 	line-height: 60px;
 	padding: 0 15px;
