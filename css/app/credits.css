@@ -1,0 +1,78 @@
+div.credit-status-block {
+	display: inline-block;
+	margin-top: 24px;
+	width: 100%;
+}
+
+div.current-credit-info {
+	display: block;
+	width: 878px;
+}
+div.current-credit-block {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 0px;
+	margin-top: 19px;
+	padding: 0 10px;
+	vertical-align: top;
+}
+
+div.current-credit-block label { display: block; font-size: 14px; font-weight: 500; }
+div.current-credit-block span { display: block; font-size: 24px; font-weight: 300; margin-top: 6px; }
+
+div.credit-sum { width: 360px; }
+div.to-pay { width: 518px; }
+div.settled { margin-top: 34px; width: 100%; }
+div.loan-balance { width: 216px; }
+div.days-overdue { width: 145px; }
+div.credit-penalty { width: 517px; }
+
+div.credit-sum span, div.to-pay span { font-size: 36px; }
+div.settled span { color: #00a651; }
+div.loan-balance span { color: #ed1c24; }
+
+div.credit-status-block-content { position: relative; }
+div.credit-status-block-content div.pay-btn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+div.credit-status-block-heading {
+	border-bottom: 1px dashed #bfbfbf;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 24px;
+	padding-bottom: 3px;
+}
+
+div.list-header, div.credit-info {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 0px;
+	font-weight: 400;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 12px 5px 12px 0px;
+	position: relative;
+	white-space: nowrap;
+}
+div.credit-info { font-weight: 300; }
+
+div.list-header>div, div.credit-info>div { display: inline-block; margin-left: 9px; text-align: left; }
+div.list-header>div { font-size: 14px; }
+div.credit-info>div { font-size: 24px; }
+
+div.loan-number { width: 167px; }
+div.date-of-issue { width: 244px; }
+div.return-date { width: 261px; }
+div.bonus-points { width: 181px; }
+
+div.credit-info div.bonus-points { color: #00a651; }
+div.credit-info div.bonus-points span { font-weight: 500; }
+div.more a { color: #cda349; font-size: 14px; }
+div.more a:hover { text-decoration: none; }

@@ -7,6 +7,7 @@
 @import "app/profile.css" all;
 @import "app/pages.css" all;
 @import "app/news.css" all;
+@import "app/credits.css" all;
 @import "third_party/formtastic.css" all;
 @import "third_party/chosen.css" all;
 @import "third_party/slider.css" all;
