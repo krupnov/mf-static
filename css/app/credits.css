@@ -40,7 +40,6 @@ div.credit-status-block-content div.pay-btn {
 	right: 0;
 }
 
-
 div.credit-status-block-heading {
 	border-bottom: 1px dashed #bfbfbf;
 	font-weight: 400;
@@ -48,6 +47,8 @@ div.credit-status-block-heading {
 	margin-top: 24px;
 	padding-bottom: 3px;
 }
+div.credit-status-block-heading span { color: #cda349; font-size: 14px; }
+div.credit-status-block-heading span:hover { text-decoration: none; }
 
 div.list-header, div.credit-info {
 	-moz-box-sizing: border-box;

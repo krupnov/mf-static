@@ -17,3 +17,32 @@
 		padding: 20px 0px;
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	div.offers-block div.offers-articles:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	div.offers-block div.offers-articles {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		clear: both;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	div.offers-block div.offers-articles {
+		clear: both;
+	    max-width: 100%;
+	}
+	div.offers-block div.offers-articles:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	div.offers-block div.offers-articles article { margin-left: 0px; width: 100%; }
+}

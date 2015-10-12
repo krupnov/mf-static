@@ -28,3 +28,26 @@ div.pagination {
 }
 div.pagination span { color: #6c301e; }
 div.pagination a { color: #cda349; text-decoration: none; }
+
+/*---------------- GET CREDIT PAGE ------------------*/
+div.offers-block { margin-top: 24px; }
+div.offers-block h2 {
+	border-bottom: 1px dashed #bfbfbf;
+	font-weight: 400;
+	font-size: 18px;
+	padding-bottom: 3px;
+}
+
+div.offers-block div.offers-articles article {
+	border: 1px solid #e6e6e6;
+	float: left;
+	display: block;
+	margin-left: 2%;
+	position: relative;
+	padding: 20px;
+	width: 32%;
+}
+div.offers-block div.offers-articles article:first-child { margin-left: 0px; }
+
+div.offers-block article h2 { border-bottom: 0px; padding-bottom: 0px; }
+div.offers-block div.more-offers-btn { margin-top: 50px; text-align: center; width: 100%; }
