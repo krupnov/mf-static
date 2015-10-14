@@ -87,6 +87,7 @@
 	float: right;
 	font-size: 18px;
 	font-weight: 400;
+	margin-left: 5px;
 }
 
 .promo-slider .order-btn { margin-top: 40px; text-align: center; }

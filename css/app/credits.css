@@ -77,3 +77,95 @@ div.credit-info div.bonus-points { color: #00a651; }
 div.credit-info div.bonus-points span { font-weight: 500; }
 div.more a { color: #cda349; font-size: 14px; }
 div.more a:hover { text-decoration: none; }
+
+
+div.get-credit-block div.promo-slider, div.get-credit-block div.credit-calculation {
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.get-credit-block div.promo-slider {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 68px 0px 0px 0px;
+	max-width: 60%;
+	padding: 0px 38px 0px 12px;
+}
+
+div.get-credit-block div.promo-slider div.amount div.labels label,
+div.get-credit-block div.promo-slider div.time div.labels label {
+	color: #999999;
+	font-size: 18px;
+}
+
+div.get-credit-block div.promo-slider div.amount div.labels label:last-child,
+div.get-credit-block div.promo-slider div.time div.labels label:last-child {
+	float: right;
+}
+
+div.get-credit-block div.promo-slider div.input-value {
+	color: #2e2f38;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 14px;
+}
+
+div.get-credit-block div.promo-slider div.input-value input {
+	-moz-border-radius: 7px;
+	-moz-box-sizing: border-box;
+	-webkit-border-radius: 7px;
+	-webkit-box-sizing: border-box;
+	background-color: #f8f8f9;
+	border-radius: 7px;
+	border: 0px;
+	box-sizing: border-box;
+	color: #7895a4;
+	font-size: 24px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0px 10px;
+	outline-width: 0px;
+	padding: 0px 15px;
+	text-align: center;
+	width: 110px;
+}
+div.get-credit-block div.promo-slider div.input-value input#input-time { width: 58px; }
+
+
+div.credit-calculation {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: 1px solid #999999;
+	color: #000000;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 30px;
+	max-width: 40%;
+	padding: 5px 0px 18px 40px;
+}
+
+div.credit-calculation div.calculation-fields:first-child { border-bottom: 1px solid #cccccc; }
+
+div.credit-calculation div.calculation-fields {
+	padding: 13px 12px;
+}
+
+div.credit-calculation div.calculation-fields label {
+	display: inline-block;
+	width: 153px;
+}
+div.credit-calculation div.calculation-fields label.interest-rate { width: 100%; }
+div.credit-calculation span {
+	font-size: 36px;
+	font-weight: 500;
+}
+
+div.credit-calculation span.interest-rate { display: inline-block; font-size: 20px; font-weight: 400; margin-top: 5px; }
+
+div.credit-calculation div.get-credit-btn {
+	margin-top: 45px;
+	text-align: center;
+	width: 100%;
+}

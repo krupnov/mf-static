@@ -5,38 +5,41 @@ layout: default
 <h1 class="page-heading">Выдача кредита</h1>
 
 <div class="get-credit-block">
-	<div class="credit-status-block-heading">
-		Текущий кредит <span id="flip">> Показать</span>
-	</div>
-	<div class="credit-status-block-content" id="flip-block">
-		<div class="current-credit-info">
-			<div class="current-credit-block credit-sum">
-				<label>Сумма кредита</label>
-				<span><strong>100 000</strong> рублей</span>
+	<div class="promo-slider">
+		<div class="amount">
+			<div class="labels">
+				<label>0 руб.</label><label>10 000 руб.</label>
 			</div>
-			<div class="current-credit-block to-pay">
-				<label>К оплате за период 14.04.2015 - 19.04.2015</label>
-				<span>12 000 рублей</span>
-			</div>
-			<div class="current-credit-block settled">
-				<label>Погашено</label>
-				<span>30 000 рублей</span>
-			</div>
-			<div class="current-credit-block loan-balance">
-				<label>Остаток по кредиту</label>
-				<span>70 000 рублей</span>
-			</div>
-			<div class="current-credit-block days-overdue">
-				<label>Дней просрочки</label>
-				<span>20 дней</span>
-			</div>
-			<div class="current-credit-block credit-penalty">
-				<label>Штраф за просрочку</label>
-				<span>20 x 100 000 x 0,1% = 2 000 рублей</span>
+			<div id="slider-amount"></div>
+			<div class="input-value">
+				Кредит на сумму<input type="text" id="input-amount">руб.
 			</div>
 		</div>
-		<div class="pay-btn">
-			<a href="#"><img src="images/pay-btn.png" height="53" width="180" alt="" class="pay-btn" /></a>
+		<div class="time">
+			<div class="labels">
+				<label>0 дней</label><label>30 дней</label>
+			</div>
+			<div id="slider-time"></div>
+			<div class="input-value">
+				На срок<input type="text" id="input-time">дней
+			</div>
+		</div>
+	</div>
+	<div class="credit-calculation">
+		<div class="calculation-fields">
+			<label>Всего к возврату:</label>
+			<span class="return-sum">17 000</span> р.
+		</div>
+		<div class="calculation-fields">
+			<label>Вернуть до:</label>
+			<span class="return-date">13</span> сентября
+		</div>
+		<div class="calculation-fields">
+			<label class="interest-rate">Процентная ставка:</label><br />
+			<span class="interest-rate">13,5 %</span> / месяц
+		</div>
+		<div class="get-credit-btn">
+			<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
 		</div>
 	</div>
 </div>
