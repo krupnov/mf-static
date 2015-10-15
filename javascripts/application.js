@@ -1,6 +1,9 @@
 $(document).on('ready page:load', function() {
 	creditBlocks.init();
-	getCreditSliders.init();
+	
+	if(($('div.promo-cover').length > 0)|| ($('div.get-credit-block').length > 0)) {
+		getCreditSliders.init();
+	}
 	
 	$('#mobile-nav').sidr({
 		displace: false,
