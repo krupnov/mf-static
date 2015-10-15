@@ -116,7 +116,7 @@ var getCreditSliders = {
 				input_time.value = values[handle];
 			});
 			
-			input_ешьу.addEventListener('change', function(){
+			input_time.addEventListener('change', function(){ 
 				slider_time.noUiSlider.set(this.value);
 			});
 		}
