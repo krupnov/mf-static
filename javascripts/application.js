@@ -59,24 +59,28 @@ var creditBlocks = {
 var getCreditSliders = {
 	init: function() {
 		var amount_options = {
-			start: 0,
-			step: 1,
+			start: 3000,
+			step: 100,
 			range: {
-				'min': 0,
+				'min': 1000,
 				'max': 10000
 			},
 
-			format: wNumb({
-				decimals: 0,
-				thousand: ' ',
-			})
-	    };
+			format: {
+				  to: function ( value ) {
+						return Math.round(value);
+					  },
+					  from: function ( value ) {
+						return value;
+					  }
+					}
+		};
 
 		var time_options = {
-			start: 0,
+			start: 7,
 			step: 1,
 			range: {
-				'min': 0,
+				'min': 5,
 				'max': 30
 			},
 
