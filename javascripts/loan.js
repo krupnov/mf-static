@@ -8,6 +8,9 @@ $(document).ready(function() {
 	input_amount = document.getElementById('input-amount'),
 	input_time = document.getElementById('input-time');
 
+	noUiSlider.create(slider_amount, sliders_options.amount_options);
+	noUiSlider.create(slider_time, sliders_options.time_options);
+
 	if($('div.get-credit-block').length > 0) {
 		slider_amount.noUiSlider.on('update', function( values, handle ) {
 			input_amount.value = values[handle];

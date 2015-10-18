@@ -1,7 +1,7 @@
 $(document).on('ready page:load', function() {
 	creditBlocks.init();
 	
-	if(($('div.promo-cover').length > 0)|| ($('div.get-credit-block').length > 0)) {
+	if(($('div.promo-cover').length > 0)) {
 		getCreditSliders.init();
 	}
 	
@@ -26,6 +26,39 @@ $(document).on('ready page:load', function() {
 	
 	// $('.chosen-select').chosen({disable_search: true});
 });
+
+var sliders_options = {
+	amount_options : {
+			start: 3000,
+			step: 100,
+			range: {
+				'min': 1000,
+				'max': 10000
+			},
+
+			format: {
+				  to: function ( value ) {
+						return Math.round(value);
+					  },
+					  from: function ( value ) {
+						return value;
+					  }
+					}
+		},
+	time_options : {
+			start: 7,
+			step: 1,
+			range: {
+				'min': 5,
+				'max': 30
+			},
+
+			format: wNumb({
+				decimals: 0,
+				thousand: ' ',
+			})
+		}
+};
 
 var creditBlocks = {
 	init: function() {
@@ -58,45 +91,14 @@ var creditBlocks = {
 
 var getCreditSliders = {
 	init: function() {
-		var amount_options = {
-			start: 3000,
-			step: 100,
-			range: {
-				'min': 1000,
-				'max': 10000
-			},
-
-			format: {
-				  to: function ( value ) {
-						return Math.round(value);
-					  },
-					  from: function ( value ) {
-						return value;
-					  }
-					}
-		};
-
-		var time_options = {
-			start: 7,
-			step: 1,
-			range: {
-				'min': 5,
-				'max': 30
-			},
-
-			format: wNumb({
-				decimals: 0,
-				thousand: ' ',
-			})
-		};
 
 		var slider_amount = document.getElementById('slider-amount'),
 			slider_time = document.getElementById('slider-time'),
 			amount_count = document.getElementById('amount-count'),
 			time_count = document.getElementById('time-count')
 
-		noUiSlider.create(slider_amount, amount_options);
-		noUiSlider.create(slider_time, time_options);
+		noUiSlider.create(slider_amount, sliders_options.amount_options);
+		noUiSlider.create(slider_time, sliders_options.time_options);
 
 		if($('div.promo-cover').length > 0) {
 			slider_amount.noUiSlider.on('update', function( values, handle ) {
