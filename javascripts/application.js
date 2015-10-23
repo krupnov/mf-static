@@ -1,5 +1,5 @@
 $(document).on('ready page:load', function() {
-	creditBlocks.init();
+//	creditBlocks.init();
 	
 	if(($('div.promo-cover').length > 0)) {
 		getCreditSliders.init();
