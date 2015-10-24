@@ -10,6 +10,9 @@ $(document).ready(function() {
 	input_amount = document.getElementById('input-amount'),
 	input_time = document.getElementById('input-time');
 
+	sliders_options.amount_options.start = initialAmount;
+	sliders_options.time_options.start = initialPeriod;
+	
 	noUiSlider.create(slider_amount, sliders_options.amount_options);
 	noUiSlider.create(slider_time, sliders_options.time_options);
 
