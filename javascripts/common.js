@@ -22,6 +22,13 @@ var passwordMatcher = function(value, element) {
 	}
 };
 
+function convertToLocalDate(dateFormat) {
+	$(".localdate").each(function(i, obj) {
+		var localDate = moment(Number(obj.innerHTML)).toDate();
+		obj.innerHTML = moment(localDate).format(dateFormat);
+	});
+};
+
 function addPasswordValidationRule(ruleName) {
 	$.validator.addMethod(
 		ruleName,

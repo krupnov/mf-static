@@ -3,6 +3,8 @@
  */
 $(document).ready(function() {
 	
+	convertToLocalDate(messages["date.pattern"]);
+	
 	var slider_amount = document.getElementById('slider-amount'),
 	slider_time = document.getElementById('slider-time'),
 	input_amount = document.getElementById('input-amount'),
