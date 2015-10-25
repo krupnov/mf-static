@@ -3,7 +3,7 @@
  */
 
 function updateDebt(span_debt, initial_amount, period) {
-	span_debt.textContent = Math.floor(Number(initial_amount)*(1 + Number(period) * rate / 100));
+	span_debt.textContent = numberWithSpaces(Math.floor(Number(initial_amount)*(1 + Number(period) * rate / 100)));
 }
 
 function updateReturnDate(span_return_date, period) {

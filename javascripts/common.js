@@ -10,6 +10,10 @@ if (!String.format) {
 	};
 }
 
+function numberWithSpaces(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 var passwordMatcher = function(value, element) {
 	var password = $("#password").val();
 	var confirmPassword = $("#repeatPassword").val();
