@@ -23,6 +23,9 @@ $(document).ready(function() {
 				} else {
 					refundButton.hide("slow");
 				}
+			},
+			error: function() {
+				location.reload(true);
 			}
 		});
 	}, 10000)
