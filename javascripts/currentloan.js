@@ -27,6 +27,7 @@ $(document).ready(function() {
 				} else {
 					refundButton.hide("slow");
 				}
+				debt.textContent = numberWithSpaces(data.debt);
 			},
 			error: function() {
 				location.reload(true);
