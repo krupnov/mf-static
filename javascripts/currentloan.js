@@ -7,6 +7,10 @@ $(document).ready(function() {
 	var localEndDate = moment(loanEndDate).toDate();
 	var loanStateSpan = document.getElementById("loan-state");
 	var refundButton = $("#refund");
+	var initialAmount = document.getElementById("initial-amount");
+	initialAmount.textContent = numberWithSpaces(initialAmount.textContent);
+	var debt = document.getElementById("debt");
+	debt.textContent = numberWithSpaces(debt.textContent);
 	
 	$("#loan-period").text(moment(localStartDate).format(messages["date.pattern"]) + " - "
 			+ moment(localEndDate).format(messages["date.pattern"]));
