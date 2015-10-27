@@ -35,7 +35,7 @@ $(document).ready(function() {
 				error: function() {
 					location.reload(true);
 				}
-			});
+			}); 
 		}, 10000);
 	}
 });
