@@ -20,7 +20,6 @@ var dateFormatChecker = function(value, element) {
 $(document).ready(function() {
 	
 	var phoneMask = messages["phonenumber.mask"];
-	$("#phone\\.phoneNumber").mask(phoneMask);
 	$("#passport\\.seriaAndNumber").mask("9999 № 999999");
 	$("#job\\.phone\\.phoneNumber").mask(phoneMask);
 	$("#additionalInfo\\.homePhone\\.phoneNumber").mask(phoneMask);
@@ -60,8 +59,9 @@ $(document).ready(function() {
 			patronymic: {
 				required: true
 			},
-			"phone.phoneNumber": {
-				required: true	
+			email : {
+				required: true,
+				email: true
 			},
 			birthday: {
 				required: true,
@@ -93,6 +93,10 @@ $(document).ready(function() {
 			},
 			acceptPersonalData: {
 				required: messages["validation.policies.personaldata.notaccepted"]
+			}, 
+			email: {
+				required: messages["org.hibernate.validator.constraints.NotEmpty.message"],
+				email: messages["org.hibernate.validator.constraints.Email.message"]
 			}
 		},
 		errorPlacement: function(error, element) {
