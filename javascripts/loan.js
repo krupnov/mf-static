@@ -16,7 +16,7 @@ $(document).ready(function() {
 	if (currentLoan) {
 		var debt = document.getElementById("debt");
 		debt.textContent = numberWithSpaces(debt.textContent);
-		
+
 		setInterval(function() {
 			$.ajax({
 				type: "GET",
@@ -30,7 +30,7 @@ $(document).ready(function() {
 					} else {
 						refundButton.hide("slow");
 					}
-					debt.textContent = numberWithSpaces(data.debt);
+					debt.textContent = numberWithSpaces(data.debt) + ' руб.';
 				},
 				error: function() {
 					location.reload(true);
