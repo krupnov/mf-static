@@ -1,0 +1,27 @@
+@media only screen and (min-width: 848px) and (max-width: 1000px) {
+	div.credit-calculation div.calculation-fields label { width: 100%; }
+}
+
+@media (max-width: 847px) {
+	div.get-credit-block div.promo-slider { margin-top: 38px; max-width: 100%; padding: 0px; }
+	div.get-credit-block div.credit-calculation {
+		border: 0px;
+		display: block;
+		margin: 30px auto 0;
+		max-width: 100%;
+		padding: 0px;
+		width: 312px;
+	}
+	div.credit-calculation div.get-credit-btn { margin-top: 10px; }
+}
+
+@media (max-width: 432px) {
+	div.get-credit-block div.promo-slider div.input-value { text-align: center; }
+	div.get-credit-block div.promo-slider div.input-value label { display: block; padding-bottom: 10px; width: 100%; }
+	div.get-credit-block div.promo-slider div.input-value input { margin-left: 0px; }
+	
+	div.credit-calculation { text-align: center; }
+	div.credit-calculation div.calculation-fields label { width: 100%; }
+	div.credit-calculation div.get-credit-btn { width: 100%; }
+	div.credit-calculation div.get-credit-btn img { width: 100%; height: auto; }
+}

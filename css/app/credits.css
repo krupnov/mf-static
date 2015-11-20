@@ -104,7 +104,7 @@ div.get-credit-block div.promo-slider div.time div.labels label:last-child {
 	float: right;
 }
 
-div.get-credit-block div.promo-slider div.input-value {
+div.get-credit-block div.promo-slider div.input-value, div.get-credit-block div.promo-slider div.input-value label {
 	color: #2e2f38;
 	font-size: 18px;
 	font-weight: 300;
