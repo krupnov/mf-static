@@ -27,6 +27,8 @@ $(document).ready(function() {
 	$("#extraDocuments\\.driverLicense").mask("99CC № 999999");
 	$("#extraDocuments\\.SNILS").mask("999-999-999 99");
 	$("#birthday").mask("99.99.9999");
+	$("#passport\\.issuedDate").mask("99.99.9999");
+	$("#postCode").mask("999999");
 	
 	$.validator.addMethod(
 		"age",
@@ -77,6 +79,17 @@ $(document).ready(function() {
 			"passport.registrationAddress": {
 				required: true
 			},
+			"passport.issuedDate": {
+				required: true,
+				dateFormat: true,
+				age: true
+			},
+			"passport.issuedBy": {
+				required: true
+			},
+			"passport.registrationCity": {
+				required: true
+			},
 			"job.salary": {
 				number: true
 			},
@@ -85,6 +98,11 @@ $(document).ready(function() {
 			},
 			acceptPersonalData: {
 				required: true
+			},
+			postCode: {
+				required: true,
+				number: true,
+				range: [100000, 999999]
 			}
 		},
 		messages: {
@@ -95,7 +113,6 @@ $(document).ready(function() {
 				required: messages["validation.policies.personaldata.notaccepted"]
 			}, 
 			email: {
-				required: messages["org.hibernate.validator.constraints.NotEmpty.message"],
 				email: messages["org.hibernate.validator.constraints.Email.message"]
 			}
 		},
