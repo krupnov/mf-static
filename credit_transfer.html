@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<h1 class="page-heading">Зачисление кредита</h1>
+
+<div class="credit-transfer-block">
+	<div class="credit-transfer-options">
+		<div class="credit-transfer-option credit-card">
+			<input type="radio" name="credit-transfer-option" value="credit-card" id="credit-card" class="trigger" />
+			<label class="credit-card-img" for="credit-card"></label>
+		</div>
+		<div class="credit-transfer-option billing-account">
+			<input type="radio" name="credit-transfer-option" value="billing-account" id="billing-account" class="trigger" />
+			<label class="billing-account-img" for="billing-account"></label>
+		</div>
+		<div class="credit-transfer-option yandex-wallet">
+			<input type="radio" name="credit-transfer-option" value="yandex-wallet" id="yandex-wallet" class="trigger" />
+			<label class="yandex-wallet-img" for="yandex-wallet"></label>
+		</div>
+	</div>
+	
+	<div id="credit-card" class="credit-transfer-option-block">
+		<h2>Привязанные карты</h2>
+	</div>
+	
+	<div id="billing-account" class="credit-transfer-option-block">
+		<h2>Рассчетный счет</h2>
+		<div class="field bank-name">
+			<input type="text" placeholder="Наименование банка" />
+		</div>
+		<div class="field bank-city">
+			<input type="text" placeholder="Город отделения банка" />
+		</div>
+		<div class="field bik-bank">
+			<input type="text" placeholder="БИК банка" />
+		</div>
+		<div class="field correspondent-account">
+			<input type="text" placeholder="Корреспонденский счет" />
+		</div>
+		<div class="field account-number">
+			<input type="text" placeholder="Номер счета получателя" />
+		</div>
+		<div class="field purpose-of-payment">
+			<textarea placeholder="Назначение платежа (необязательное поле)"></textarea>
+		</div>
+		<div class="field-block">
+			<label>Информация о плательщике</label>
+			<div class="field surname">
+				<input type="text" placeholder="Фамилия" />
+			</div>
+			<div class="field name">
+				<input type="text" placeholder="Имя" />
+			</div>
+			<div class="field patronymic">
+				<input type="text" placeholder="Отчество" />
+			</div>
+			<div class="field address">
+				<input placeholder="Адрес регистрации плательщика" />
+			</div>
+		</div>
+		<div class="field-block">
+			<label>Паспортные данные</label>
+			<div class="field passport-nmbr">
+				<label>Серия и номер паспорта:</label>
+				<input type="text" placeholder="---- ------" />
+			</div>
+			<div class="field passport-date">
+				<label>Дата выдачи паспорта:</label>
+				<input type="text" placeholder="--/--/----" />
+			</div>
+			<div class="field mobile-nmbr">
+				<label>Номер мобильного телефона:</label>
+				<input type="text" placeholder="+7 (---) --- -- --" />
+			</div>
+		</div>
+		<div class="checkboxField">
+			<input type="checkbox" name="acceptContractOffer" />
+			<label for="acceptContractOffer">Я ознакомился с договором оферты</label>
+		</div>
+		<div class="get-credit-btn">
+			<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
+		</div>
+	</div>
+	
+	<div id="yandex-wallet" class="credit-transfer-option-block">
+		<h2>Яндекс кошелек</h2>
+		<div class="field yandex-wallet-nmbr">
+			<input type="text" placeholder="Номер счета Яндекс кошелька" id="wallet-nmbr" />
+		</div>
+		<div class="field mobile-nmbr">
+			<label>Номер мобильного телефона:</label>
+			<input type="text" placeholder="+7 (---) --- -- --" id="mobile-nmbr" />
+		</div>
+		<div class="get-credit-btn">
+			<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
+		</div>
+	</div>
+</div>
