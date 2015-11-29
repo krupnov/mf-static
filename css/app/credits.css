@@ -9,9 +9,6 @@ div.current-credit-info {
 	width: 878px;
 }
 div.current-credit-block {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 	display: inline-block;
 	font-size: 0px;
 	margin-top: 19px;
@@ -51,9 +48,6 @@ div.credit-status-block-heading span { color: #cda349; font-size: 14px; }
 div.credit-status-block-heading span:hover { text-decoration: none; }
 
 div.list-header, div.credit-info {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 	font-size: 0px;
 	font-weight: 400;
 	margin: 0 auto;
@@ -85,9 +79,6 @@ div.get-credit-block div.promo-slider, div.get-credit-block div.credit-calculati
 }
 
 div.get-credit-block div.promo-slider {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 68px 0px 0px 0px;
 	max-width: 60%;
 	padding: 0px 38px 0px 12px;
@@ -113,13 +104,10 @@ div.get-credit-block div.promo-slider div.input-value, div.get-credit-block div.
 
 div.get-credit-block div.promo-slider div.input-value input {
 	-moz-border-radius: 7px;
-	-moz-box-sizing: border-box;
 	-webkit-border-radius: 7px;
-	-webkit-box-sizing: border-box;
 	background-color: #f8f8f9;
 	border-radius: 7px;
 	border: 0px;
-	box-sizing: border-box;
 	color: #7895a4;
 	font-size: 24px;
 	height: 40px;
@@ -134,9 +122,6 @@ div.get-credit-block div.promo-slider div.input-value input#input-time { width: 
 
 
 div.credit-calculation {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 	border-left: 1px solid #999999;
 	color: #000000;
 	font-size: 18px;
@@ -168,4 +153,190 @@ div.credit-calculation div.get-credit-btn {
 	margin-top: 45px;
 	text-align: center;
 	width: 100%;
+}
+
+div.credit-transfer-block { margin-top: 30px; }
+
+div.credit-transfer-block div.credit-transfer-options {
+	border-right: 1px solid #CFD8DC;
+	display: inline-block;
+	padding-right: 29px;
+	vertical-align: top;
+	width: 390px;
+}
+
+div.credit-transfer-block div.credit-transfer-options div.credit-transfer-option { margin-bottom: 29px; }
+
+div.credit-transfer-block div.credit-transfer-options input {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+div.credit-transfer-block div.credit-transfer-options label {
+	-moz-background-size: cover;
+	-moz-border-radius: 5px;
+	-moz-box-sizing: border-box;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	-webkit-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 5px;
+	border: 1px solid #CFD8DC;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	height: 201px;
+	width: 361px;
+}
+div.credit-transfer-block div.credit-transfer-options label:hover {
+	border: 1px solid #FAE089;
+}
+div.credit-transfer-block div.credit-transfer-options input:checked +label {
+	border: 1px solid #FAE089;
+}
+
+div.credit-transfer-block div.credit-transfer-options label.credit-card-img {
+	background: url('../../images/credits/options/credit-card.png');
+}
+div.credit-transfer-block div.credit-transfer-options label.billing-account-img {
+	background: url('../../images/credits/options/billing-account.png');
+}
+div.credit-transfer-block div.credit-transfer-options label.yandex-wallet-img {
+	background: url('../../images/credits/options/yandex-wallet.png');
+}
+
+div.credit-transfer-block div.credit-transfer-option-block {
+	display: inline-block;
+	padding-left: 30px;
+	vertical-align: top;
+	width: 730px;
+}
+
+div.credit-transfer-block div.credit-transfer-option-block h2 {
+	border-bottom: 1px solid #CFD8DC;
+	font-size: 18px;
+	font-weight: 400;
+	padding-bottom: 14px;
+	text-transform: uppercase;
+}
+
+div.credit-transfer-block div#yandex-wallet, div.credit-transfer-block div#credit-card { display: none; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.field { margin-top: 14px; }
+div.credit-transfer-block div.credit-transfer-option-block div.field input,
+div.credit-transfer-block div.credit-transfer-option-block div.field textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: #f8f8f9;
+	border-radius: 10px;
+	border: 0px;
+	box-sizing: border-box;
+	color: #7895a4;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 300;
+	line-height: 50px;
+	outline-style: none;
+	padding: 0 20px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field label {
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-right: 18px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.mobile-nmbr input { width: 169px; }
+div.credit-transfer-block div.credit-transfer-option-block div.get-credit-btn { margin-top: 30px; text-align: center; }
+
+/*---- billing-account ----*/
+div.credit-transfer-block div.credit-transfer-option-block div.field {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+div.credit-transfer-block div#billing-account div.field input { width: 100%; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.bank-name { max-width: 300px; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.bank-city {
+	max-width: 180px;
+	margin-left: 20px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.bik-bank {
+	max-width: 180px;
+	margin-left: 20px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.correspondent-account,
+div.credit-transfer-block div.credit-transfer-option-block div.account-number {
+	max-width: 340px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.account-number { margin-left: 20px; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment { max-width: 700px; }
+div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment textarea {
+	resize: none;
+	width: 100%;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block label {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	margin-top: 26px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field { max-width: 220px; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.name,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.patronymic {
+	margin-left: 20px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.address { max-width: 700px; }
+
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-nmbr,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-date,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.mobile-nmbr {
+	max-width: 100%;
+	width: 100%;
+}
+
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field label,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field input {
+	display: inline-block;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-nmbr input {
+	max-width: 140px;
+	width: 100%;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-date input {
+	max-width: 110px;
+	width: 100%;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.mobile-nmbr input {
+	max-width: 160px;
+	width: 100%;
+}
+
+div.credit-transfer-block div.credit-transfer-option-block div.checkboxField { margin-top: 26px; }
+div.credit-transfer-block div.credit-transfer-option-block div.checkboxField input {
+	margin: 0px 15px 0px 0px;
+	vertical-align: bottom;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.checkboxField label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+
+/*---- yandex-wallet ----*/
+div.credit-transfer-block div#yandex-wallet h2:first-letter { color: red; }
+div.credit-transfer-block div.credit-transfer-option-block div.yandex-wallet-nmbr input {
+	width: 360px;
 }

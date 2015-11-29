@@ -9,6 +9,10 @@ $(document).on('ready page:load', function() {
 		getCreditSliders.init();
 	}
 	
+	if(($('div.credit-transfer-block').length > 0)) {
+		chooseCreditTransferOption.init();
+	}
+	
 	$('#mobile-nav').sidr({
 		displace: false,
 		onOpen: function(name) {
@@ -123,5 +127,16 @@ var getCreditSliders = {
 				"&time=" + time_count.innerHTML;
 			return false;
 		};
+	}
+}
+
+var chooseCreditTransferOption = {
+	init: function() {
+		$("input[name$='credit-transfer-option']").click(function() {
+			var creditOption = $(this).val();
+			
+			$("div.credit-transfer-option-block").hide();
+			$("div#" + creditOption).css('display', 'inline-block');
+		})
 	}
 }
