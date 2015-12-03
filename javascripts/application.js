@@ -117,16 +117,6 @@ var getCreditSliders = {
 				time_count.innerHTML = values[handle];
 			});
 		}
-		
-		var loanRequestHref = document.getElementById('get-credit');
-		var initialLoanRequestReference = loanRequestHref.href;
-		loanRequestHref.href = "#";
-		loanRequestHref.onclick = function () {
-			window.location.href = initialLoanRequestReference + 
-				"?amount=" + amount_count.innerHTML + 
-				"&time=" + time_count.innerHTML;
-			return false;
-		};
 	}
 }
 
