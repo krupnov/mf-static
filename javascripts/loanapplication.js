@@ -54,12 +54,8 @@ $(document).ready(function() {
 	}
 	
 	var loanRequestHref = document.getElementById('get-credit');
-	var initialLoanRequestReference = loanRequestHref.href;
-	loanRequestHref.href = "#";
-	loanRequestHref.onclick = function () {
-		window.location.href = initialLoanRequestReference + 
-			"?amount=" + input_amount.value + 
-			"&time=" + input_time.value;
-		return false;
-	};
+	var requestForm = document.getElementById('credit-form');
+	loanRequestHref.addEventListener("click", function () {
+		requestForm.submit();
+	});
 });
