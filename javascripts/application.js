@@ -1,5 +1,4 @@
 $(document).on('ready page:load', function() {
-//	creditBlocks.init();
 	
 	if(($('div.promo-cover').length > 0)) {
 		getCreditSliders.init();
@@ -7,10 +6,6 @@ $(document).on('ready page:load', function() {
 	
 	if(($('div.get-credit-block').length > 0)) {
 		getCreditSliders.init();
-	}
-	
-	if(($('div.credit-transfer-block').length > 0)) {
-		chooseCreditTransferOption.init();
 	}
 	
 	$('#mobile-nav').sidr({
@@ -32,7 +27,6 @@ $(document).on('ready page:load', function() {
 		$.sidr('close', 'sidr');
 	});
 	
-	// $('.chosen-select').chosen({disable_search: true});
 });
 
 var sliders_options = {
@@ -117,16 +111,5 @@ var getCreditSliders = {
 				time_count.innerHTML = values[handle];
 			});
 		}
-	}
-}
-
-var chooseCreditTransferOption = {
-	init: function() {
-		$("input[name$='credit-transfer-option']").click(function() {
-			var creditOption = $(this).val();
-			
-			$("div.credit-transfer-option-block").hide();
-			$("div#" + creditOption).css('display', 'inline-block');
-		})
 	}
 }
