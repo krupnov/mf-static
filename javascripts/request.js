@@ -13,7 +13,7 @@ $(document).ready(function() {
 	$("#yandex-form").validate({
 		rules: {
 			yandexAccount: {
-//				required: true
+				required: true
 			}
 		},
 		errorPlacement: function(error, element) {
