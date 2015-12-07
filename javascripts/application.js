@@ -13,6 +13,10 @@ $(document).on('ready page:load', function() {
 		chooseCreditTransferOption.init();
 	}
 	
+	if(($('div.credit-transfer-option-block').length > 0)) {
+		addNewCreditCard.init();
+	}
+	
 	$('#mobile-nav').sidr({
 		displace: false,
 		onOpen: function(name) {
@@ -127,6 +131,14 @@ var chooseCreditTransferOption = {
 			
 			$("div.credit-transfer-option-block").hide();
 			$("div#" + creditOption).css('display', 'inline-block');
+		})
+	}
+}
+
+var addNewCreditCard = {
+	init: function() {
+		$("div.add-new-credit-card-btn").click(function() {
+			$("div#add-new-credit-card").css('display', 'block');
 		})
 	}
 }

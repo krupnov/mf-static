@@ -226,7 +226,7 @@ div.credit-transfer-block div.credit-transfer-option-block h2 {
 	text-transform: uppercase;
 }
 
-div.credit-transfer-block div#yandex-wallet, div.credit-transfer-block div#credit-card { display: none; }
+div.credit-transfer-block div#yandex-wallet, div.credit-transfer-block div#billing-account { display: none; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.field { margin-top: 14px; }
 div.credit-transfer-block div.credit-transfer-option-block div.field input,
@@ -254,6 +254,74 @@ div.credit-transfer-block div.credit-transfer-option-block div.field label {
 }
 div.credit-transfer-block div.credit-transfer-option-block div.mobile-nmbr input { width: 169px; }
 div.credit-transfer-block div.credit-transfer-option-block div.get-credit-btn { margin-top: 30px; text-align: center; }
+
+/*---- credit-cards ----*/
+div.credit-transfer-block div.credit-transfer-option-block div.attached-cards { margin-top: 20px; width: 100%; }
+div.credit-transfer-option-block div.attached-cards div.card-option {
+	color: #CDA349;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 300;
+	margin-left: 30px;
+	max-width: 131px;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: top;
+}
+div.credit-transfer-option-block div.attached-cards div.card-option:first-child { margin-left: 0px; }
+
+div.credit-transfer-option-block div.attached-cards div.card-option div.credit-card-img label { cursor: pointer; }
+div.credit-transfer-option-block div.attached-cards div.card-option div.credit-card-img input {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+div.credit-transfer-option-block div.attached-cards div.card-option div.credit-card-img label input:checked {
+	border: 1px solid #FAE089;
+}
+
+div.credit-transfer-option-block div.attached-cards div.card-option div.credit-card-type { margin-top: 7px; }
+div.credit-transfer-option-block div.attached-cards div.card-option div.credit-card-nmbr { margin-top: 7px; }
+div.credit-transfer-option-block div.attached-cards div.card-option div.new-credit-card-btn-name {
+	line-height: 19px;
+	margin-top: 4px;
+}
+div.credit-transfer-option-block div.attached-cards div.add-new-credit-card-btn:hover {
+	cursor: pointer;
+}
+
+div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card {
+	display: none;
+	margin-top: 35px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card div.new-credit-card-cover {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #CFD8DC;
+	box-sizing: border-box;
+	margin: 20px auto;
+	max-width: 360px;
+	padding: 28px 44px 44px;
+}
+div.credit-transfer-block div.credit-transfer-option-block
+div.add-new-credit-card div.new-credit-card-cover input {
+	width: 100%;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card
+div.new-credit-card-cover div.valid-to { width: 159px; }
+div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card
+div.new-credit-card-cover div.cvv-code {
+	margin-left: 12px;
+	width: 99px;
+}
+div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card
+div.new-credit-card-cover div.add-credit-card-btn {
+	margin-top: 18px;
+	text-align: center;
+}
 
 /*---- billing-account ----*/
 div.credit-transfer-block div.credit-transfer-option-block div.field {
@@ -333,7 +401,6 @@ div.credit-transfer-block div.credit-transfer-option-block div.checkboxField lab
 	font-size: 14px;
 	font-weight: 300;
 }
-
 
 /*---- yandex-wallet ----*/
 div.credit-transfer-block div#yandex-wallet h2:first-letter { color: red; }
