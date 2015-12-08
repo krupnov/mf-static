@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
 	chooseCreditTransferOption.init($("div#credit-card"));
+	initPopup();
 	initRequestFormSubmitProcess("#yandex-form", "#yandex-button");
 	
 	jQuery.extend(jQuery.validator.messages, {
@@ -26,13 +27,38 @@ function stringStartsWith(string, prefix) {
 	return !string.indexOf(prefix);
 }
 
+function initPopup() {
+	//------------escape
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // escape key maps to keycode `27`
+			if ($('[data-popup]:visible').length) {
+//				alert($('[data-popup]:visible').attr('data-popup'));
+				$('[data-popup-close]:visible').click();
+			}
+		}
+	});
+	//----- OPEN
+	$('[data-popup-open]').on('click', function(e)  {
+		var targeted_popup_class = jQuery(this).attr('data-popup-open');
+		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+		e.preventDefault();
+	});
+ 
+	//----- CLOSE
+	$('[data-popup-close]').on('click', function(e)  {
+		var targeted_popup_class = jQuery(this).attr('data-popup-close');
+		$('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+		e.preventDefault();
+	});
+};
+
 function initRequestFormSubmitProcess(form_selector, ref_selector) {
 	var form = $(form_selector);
 	var ref = $(ref_selector);
-	ref.click(function(e) {
-		e.preventDefault();
-		form.submit();
-	});
+//	ref.click(function(e) {
+//		e.preventDefault();
+//		form.submit();
+//	});
 	
 	form.submit(function(ev) {
 		if (!form.valid()) {
