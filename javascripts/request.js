@@ -3,9 +3,8 @@
  */
 
 $(document).ready(function() {
-	chooseCreditTransferOption.init($("div#credit-card"));
+	initTransferForms("credit-card");
 	initPopup();
-	initRequestFormSubmitProcess("#yandex-form", "#yandex-button");
 	
 	jQuery.extend(jQuery.validator.messages, {
 		required: messages["org.hibernate.validator.constraints.NotEmpty.message"],
@@ -27,8 +26,41 @@ function stringStartsWith(string, prefix) {
 	return !string.indexOf(prefix);
 }
 
+function initTransferForms(transfer_form_selected) {
+	$('[data-transfer-form-send]').on('click', function(e) {
+		var targeted_form_class = jQuery(this).attr('data-transfer-form-send');
+		$('[data-transfer-form="' + targeted_form_class + '"]').submit();
+		e.preventDefault();
+	});
+	initCreditTransferOption($('[data-transfer-form="' + transfer_form_selected + '"]').parent());
+	
+	$('[data-transfer-form]').on('submit', function(e) {
+		var form = jQuery(this);
+		if (!form.valid()) {
+			return;
+		}
+		$.ajax({
+			type: form.attr("method"),
+			url: form.attr("action"),
+			data: form.serialize(),
+			success: function(data, textStatus) {
+				if (stringStartsWith(data, "<")) { //error in input form
+					form.parent().replaceWith(data);
+					initTransferForms(form.attr('data-transfer-form'));
+				} else if (stringStartsWith(data, messages["ajax.error"])) { //global error
+					location.reload();
+				} else { //success@requestId@resendTimeout
+					var params = data.split("@");
+					var requestId = params[1];
+				}
+			}
+		});
+		e.preventDefault();
+	});
+}
+
 function initPopup() {
-	//------------escape
+	//----- ESCAPE
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) { // escape key maps to keycode `27`
 			if ($('[data-popup]:visible').length) {
@@ -52,52 +84,15 @@ function initPopup() {
 	});
 };
 
-function initRequestFormSubmitProcess(form_selector, ref_selector) {
-	var form = $(form_selector);
-	var ref = $(ref_selector);
-//	ref.click(function(e) {
-//		e.preventDefault();
-//		form.submit();
-//	});
+function initCreditTransferOption(default_credit_option) {
 	
-	form.submit(function(ev) {
-		if (!form.valid()) {
-			return;
-		}
-		ref.hide("slow");
-		$.ajax({
-			type: form.attr("method"),
-			url: form.attr("action"),
-			data: form.serialize(),
-			success: function(data, textStatus) {
-				if (stringStartsWith(data, "<")) { //error in input form
-					form.parent().replaceWith(data);
-					initRequestFormSubmitProcess(form_selector, ref_selector);
-					chooseCreditTransferOption.init($(form_selector).parent());
-				} else if (stringStartsWith(data, messages["ajax.error"])) { //global error
-					location.reload();
-				} else { //success@requestId@resendTimeout
-					var params = data.split("@");
-					var requestId = params[1];
-				}
-			}
-		});
-		
-		ev.preventDefault();
-	});
-}
-
-var chooseCreditTransferOption = {
-	init: function(default_credit_option) {
+	$("div.credit-transfer-option-block").hide();
+	default_credit_option.css('display', 'inline-block');
+	
+	$("input[name$='credit-transfer-option']").click(function() {
+		var creditOption = $(this).val();
 		
 		$("div.credit-transfer-option-block").hide();
-		default_credit_option.css('display', 'inline-block');
-		
-		$("input[name$='credit-transfer-option']").click(function() {
-			var creditOption = $(this).val();
-			
-			$("div.credit-transfer-option-block").hide();
-			$("div#" + creditOption).css('display', 'inline-block');
-		})
-	}
+		$("div#" + creditOption).css('display', 'inline-block');
+	})
 }
