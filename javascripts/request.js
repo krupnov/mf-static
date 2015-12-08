@@ -39,6 +39,7 @@ function initTransferForms(transfer_form_selected) {
 		if (!form.valid()) {
 			return;
 		}
+		$('[data-popup="popup-sms"]').fadeIn(350);
 		$.ajax({
 			type: form.attr("method"),
 			url: form.attr("action"),
