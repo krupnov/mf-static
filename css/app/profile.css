@@ -183,14 +183,14 @@ div.profile-block div.checkboxField label {
 }
 
 /*------- PROFILE VALIDATION ------*/
-div.profile-block div.field label.error, div.profile-block div.checkboxField label.error {
+div.profile-block div.field label.error, div.profile-block div.checkboxField label.error, div.credit-transfer-option-block div.field label.error {
 	color: #f44336;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
 	margin: 4px 0px 0px 3px;
 }
-div.profile-block div.checkboxField label.error {
+div.profile-block div.checkboxField label.error, div.credit-transfer-option-block div.field label.error {
 	display: block;
 	width: 100%;
 }
