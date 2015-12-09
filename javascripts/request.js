@@ -11,6 +11,11 @@ $(document).ready(function() {
 		required: messages["org.hibernate.validator.constraints.NotEmpty.message"],
 		number: messages["typeMismatch.java.lang.Integer"]
 	});
+	initiYandexFormValidation();
+	initSmsForm();
+});
+
+function initiYandexFormValidation() {
 	$("#yandex-form").validate({
 		rules: {
 			yandexAccount: {
@@ -19,9 +24,45 @@ $(document).ready(function() {
 		},
 		errorPlacement: function(error, element) {
 				error.insertAfter(element);
+		}
+	});
+}
+
+function initSmsForm() {
+	var $form = $("#smsForm");
+	var $validator = $form.validate({
+		rules: {
+			value: {
+				required: true,
+				number: true
+			}
+		},
+		errorPlacement: function(error, element) {
+				error.insertAfter(element);
+		}
+	});
+	$form.on("submit", function(e) {
+		if (!$form.valid()) {
+			return;
+		}
+		$.ajax({
+			type: $form.attr("method"),
+			url: $form.attr("action"),
+			data: $form.serialize(),
+			success: function(data, textStatus) {
+				if (stringStartsWith(data, messages["ajax.code.invalidcode"])) { //invalid code
+					var errors = {value : messages["validation.phone.invalidcode"]};
+					$validator.showErrors(errors);
+				} else if (stringStartsWith(data, messages["ajax.code.error"])) { //global error
+					location.reload();
+				} else { 
+					window.location = messages["ajax.sms.successredirect"];
+				}
 			}
 		});
-});
+		e.preventDefault();
+	});
+}
 
 function initTransferForms(transfer_form_selected) {
 	$('[data-transfer-form-send]').on('click', function(e) {
