@@ -14,6 +14,10 @@ function numberWithSpaces(x) {
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
+function stringStartsWith(string, prefix) {
+	return !string.indexOf(prefix);
+}
+
 var passwordMatcher = function(value, element) {
 	var password = $("#password").val();
 	var confirmPassword = $("#repeatPassword").val();
@@ -42,4 +46,15 @@ function addPasswordValidationRule(ruleName) {
 		},
 		"Пароль должен быть длиннее 8 симолов, а также содержать латинские буквы нижнего и верхнего регистра и цифры."
 	);
+};
+
+function initLoadingDiv() {
+	var $loading = $('#loading').hide();
+	$(document)
+		.ajaxStart(function () {
+			$loading.show();
+		})
+		.ajaxStop(function () {
+			$loading.hide();
+		});
 };

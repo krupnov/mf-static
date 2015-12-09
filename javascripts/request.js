@@ -3,6 +3,7 @@
  */
 
 $(document).ready(function() {
+	initLoadingDiv();
 	initTransferForms("credit-card");
 	initPopup();
 	
@@ -22,10 +23,6 @@ $(document).ready(function() {
 		});
 });
 
-function stringStartsWith(string, prefix) {
-	return !string.indexOf(prefix);
-}
-
 function initTransferForms(transfer_form_selected) {
 	$('[data-transfer-form-send]').on('click', function(e) {
 		var targeted_form_class = jQuery(this).attr('data-transfer-form-send');
@@ -39,7 +36,6 @@ function initTransferForms(transfer_form_selected) {
 		if (!form.valid()) {
 			return;
 		}
-		$('[data-popup="popup-sms"]').fadeIn(350);
 		$.ajax({
 			type: form.attr("method"),
 			url: form.attr("action"),
@@ -48,11 +44,12 @@ function initTransferForms(transfer_form_selected) {
 				if (stringStartsWith(data, "<")) { //error in input form
 					form.parent().replaceWith(data);
 					initTransferForms(form.attr('data-transfer-form'));
-				} else if (stringStartsWith(data, messages["ajax.error"])) { //global error
+				} else if (stringStartsWith(data, messages["ajax.code.error"])) { //global error
 					location.reload();
 				} else { //success@requestId@resendTimeout
-					var params = data.split("@");
+					var params = data.split(messages["ajax.csv.delimiter"]);
 					var requestId = params[1];
+					$('[data-popup="popup-sms"]').fadeIn(350);
 				}
 			}
 		});
@@ -65,7 +62,6 @@ function initPopup() {
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) { // escape key maps to keycode `27`
 			if ($('[data-popup]:visible').length) {
-//				alert($('[data-popup]:visible').attr('data-popup'));
 				$('[data-popup-close]:visible').click();
 			}
 		}
