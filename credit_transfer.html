@@ -23,52 +23,16 @@ layout: default
 	<div id="credit-card" class="credit-transfer-option-block">
 		<h2>Привязанные карты</h2>
 		<div class="attached-cards">
-			<div class="attached-card card-option">
-				<div class="credit-card-img">
-					<label>
-						<input type="radio" name="credit-card-id" value="credit-card-id" id="credit-card-id" class="credit-card" />
-						<img src="../../images/credits/credit-cards-types/master-card.png" />
-					</label>
-				</div>
-				<div class="credit-card-type">
-					Visa
-				</div>
-				<div class="credit-card-nmbr">
-					12** **** **** 3456
-				</div>
-			</div>
-			<div class="attached-card card-option">
-				<div class="credit-card-img">
-					<label>
-						<input type="radio" name="credit-card-id" value="credit-card-id" id="credit-card-id" class="credit-card" />
-						<img src="../../images/credits/credit-cards-types/master-card.png" />
-					</label>
-				</div>
-				<div class="credit-card-type">
-					Mastercard
-				</div>
-				<div class="credit-card-nmbr">
-					12** **** **** 3456
-				</div>
-			</div>
-			<div class="attached-card card-option">
-				<div class="credit-card-img">
-					<label>
-						<input type="radio" name="credit-card-id" value="credit-card-id" id="credit-card-id" class="credit-card" />
-						<img src="../../images/credits/credit-cards-types/master-card.png" />
-					</label>
-				</div>
-				<div class="credit-card-type">
-					Mastercard
-				</div>
-				<div class="credit-card-nmbr">
-					12** **** **** 3456
-				</div>
+			<div class="field selectField">
+				<select data-placeholder="Выберите кредитную карту" class="credit-card-selection">
+					<option value></option>
+					<option value="Visa 12** **** **** 3456">Visa 12** **** **** 3456</option>
+					<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
+					<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
+				</select>
 			</div>
 			<div class="add-new-credit-card-btn card-option">
-				<div class="new-credit-card-btn">
-					<img src="images/credits/credit-cards-types/add-new-credit-card-btn.png" />
-				</div>
+				или
 				<div class="new-credit-card-btn-name">
 					Добавить новую карту
 				</div>

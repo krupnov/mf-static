@@ -15,6 +15,8 @@ $(document).on('ready page:load', function() {
 	
 	if(($('div.credit-transfer-option-block').length > 0)) {
 		addNewCreditCard.init();
+		
+		$('.credit-card-selection').chosen({disable_search: true});
 	}
 	
 	$('#mobile-nav').sidr({
@@ -137,7 +139,7 @@ var chooseCreditTransferOption = {
 
 var addNewCreditCard = {
 	init: function() {
-		$("div.add-new-credit-card-btn").click(function() {
+		$("div.new-credit-card-btn-name").click(function() {
 			$("div#add-new-credit-card").css('display', 'block');
 		})
 	}
