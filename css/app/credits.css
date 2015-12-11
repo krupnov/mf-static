@@ -162,10 +162,15 @@ div.credit-transfer-block div.credit-transfer-options {
 	display: inline-block;
 	padding-right: 29px;
 	vertical-align: top;
-	width: 390px;
+	max-width: 390px;
+	width: 34.821429%;
 }
 
-div.credit-transfer-block div.credit-transfer-options div.credit-transfer-option { margin-bottom: 29px; }
+div.credit-transfer-block div.credit-transfer-options div.credit-transfer-option {
+	margin-bottom: 29px;
+	max-width: 361px;
+	width: 100%;
+}
 
 div.credit-transfer-block div.credit-transfer-options input {
 	-moz-appearance: none;
@@ -177,45 +182,47 @@ div.credit-transfer-block div.credit-transfer-options input {
 }
 
 div.credit-transfer-block div.credit-transfer-options label {
-	-moz-background-size: cover;
-	-moz-border-radius: 5px;
-	-moz-box-sizing: border-box;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	-webkit-border-radius: 5px;
-	-webkit-box-sizing: border-box;
-	background-position: center center;
-	background-size: cover;
-	border-radius: 5px;
-	border: 1px solid #CFD8DC;
 	box-sizing: border-box;
 	cursor: pointer;
 	display: block;
-	height: 201px;
-	width: 361px;
+	height: 100%;
+	max-width: 361px;
+	text-align: center;
+	width: 100%;
 }
-div.credit-transfer-block div.credit-transfer-options label:hover {
-	border: 1px solid #FAE089;
+
+div.credit-transfer-block div.credit-transfer-options label > input {
+	position: absolute;
+	visibility: hidden;
 }
-div.credit-transfer-block div.credit-transfer-options input:checked +label {
+
+div.credit-transfer-block div.credit-transfer-options label > input + img {
+	-moz-border-radius: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid #CFD8DC;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	max-width: 100%;
+	padding: 50px 28.969359%;
+	vertical-align: middle;
+}
+
+div.credit-transfer-block div.credit-transfer-options label > input:checked + img,
+div.credit-transfer-block div.credit-transfer-options label > input + img:hover {
 	border: 1px solid #FAE089;
 }
 
-div.credit-transfer-block div.credit-transfer-options label.credit-card-img {
-	background: url('../../images/credits/options/credit-card.png');
-}
-div.credit-transfer-block div.credit-transfer-options label.billing-account-img {
-	background: url('../../images/credits/options/billing-account.png');
-}
-div.credit-transfer-block div.credit-transfer-options label.yandex-wallet-img {
-	background: url('../../images/credits/options/yandex-wallet.png');
-}
 
 div.credit-transfer-block div.credit-transfer-option-block {
 	display: inline-block;
 	padding-left: 30px;
 	vertical-align: top;
-	width: 730px;
+	max-width: 730px;
+	width: 65.178571%;
 }
 
 div.credit-transfer-block div.credit-transfer-option-block h2 {
