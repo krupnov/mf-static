@@ -1,3 +1,31 @@
+@media only screen and (max-width: 1024px) {
+	div.credit-transfer-block div.credit-transfer-options {
+		border: 0px;
+		max-width: 100%;
+		padding: 0px;
+		width: 100%;
+	}
+	div.credit-transfer-block div.credit-transfer-options div.credit-transfer-option {
+		display: inline-block;
+		margin-bottom: 0px;
+		margin-left: 2.212389%;
+		max-width: 288px;
+		width: 31.858407%;
+	}
+	div.credit-transfer-block div.credit-transfer-options div.credit-transfer-option:first-child {
+		margin-left: 0px;
+	}
+	
+	div.credit-transfer-block div.credit-transfer-option-block-cover {
+		display: block;
+		margin-top: 50px;
+		padding-left: 0px;
+		margin: 50px auto 0px;
+		max-width: 700px;
+		width: 100%;
+	}
+}
+
 @media only screen and (min-width: 848px) and (max-width: 1000px) {
 	div.credit-calculation div.calculation-fields label { width: 100%; }
 }

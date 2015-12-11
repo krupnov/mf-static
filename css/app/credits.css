@@ -120,7 +120,6 @@ div.get-credit-block div.promo-slider div.input-value input {
 }
 div.get-credit-block div.promo-slider div.input-value input#input-time { width: 58px; }
 
-
 div.credit-calculation {
 	border-left: 1px solid #999999;
 	color: #000000;
@@ -133,19 +132,11 @@ div.credit-calculation {
 
 div.credit-calculation div.calculation-fields:first-child { border-bottom: 1px solid #cccccc; }
 
-div.credit-calculation div.calculation-fields {
-	padding: 13px 12px;
-}
+div.credit-calculation div.calculation-fields { padding: 13px 12px; }
 
-div.credit-calculation div.calculation-fields label {
-	display: inline-block;
-	width: 153px;
-}
+div.credit-calculation div.calculation-fields label { display: inline-block; width: 153px; }
 div.credit-calculation div.calculation-fields label.interest-rate { width: 100%; }
-div.credit-calculation span {
-	font-size: 36px;
-	font-weight: 500;
-}
+div.credit-calculation span { font-size: 36px; font-weight: 500; }
 
 div.credit-calculation span.interest-rate { display: inline-block; font-size: 20px; font-weight: 400; margin-top: 5px; }
 
@@ -191,10 +182,7 @@ div.credit-transfer-block div.credit-transfer-options label {
 	width: 100%;
 }
 
-div.credit-transfer-block div.credit-transfer-options label > input {
-	position: absolute;
-	visibility: hidden;
-}
+div.credit-transfer-block div.credit-transfer-options label > input { position: absolute; visibility: hidden; }
 
 div.credit-transfer-block div.credit-transfer-options label > input + img {
 	-moz-border-radius: 5px;
@@ -204,26 +192,27 @@ div.credit-transfer-block div.credit-transfer-options label > input + img {
 	border-radius: 5px;
 	border: 1px solid #CFD8DC;
 	box-sizing: border-box;
-	box-sizing: border-box;
 	cursor: pointer;
 	max-width: 100%;
 	padding: 50px 28.969359%;
 	vertical-align: middle;
 }
 
-div.credit-transfer-block div.credit-transfer-options label > input:checked + img,
 div.credit-transfer-block div.credit-transfer-options label > input + img:hover {
 	border: 1px solid #FAE089;
 }
+div.credit-transfer-block div.credit-transfer-options label > input:checked + img {
+	border: 4px solid #FAE089;
+}
 
-
-div.credit-transfer-block div.credit-transfer-option-block {
+div.credit-transfer-block div.credit-transfer-option-block-cover {
 	display: inline-block;
-	padding-left: 30px;
 	vertical-align: top;
+	padding-left: 30px;
 	max-width: 730px;
 	width: 65.178571%;
 }
+div.credit-transfer-block div.credit-transfer-option-block { display: block; width: 100%; }
 
 div.credit-transfer-block div.credit-transfer-option-block h2 {
 	border-bottom: 1px solid #CFD8DC;

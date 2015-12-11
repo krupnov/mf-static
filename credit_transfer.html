@@ -25,118 +25,119 @@ layout: default
 			</label>
 		</div>
 	</div>
-	
-	<div id="credit-card" class="credit-transfer-option-block">
-		<h2>Привязанные карты</h2>
-		<div class="attached-cards">
-			<div class="field selectField">
-				<select data-placeholder="Выберите кредитную карту" class="credit-card-selection">
-					<option value></option>
-					<option value="Visa 12** **** **** 3456">Visa 12** **** **** 3456</option>
-					<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
-					<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
-				</select>
+	<div class="credit-transfer-option-block-cover">
+		<div id="credit-card" class="credit-transfer-option-block">
+			<h2>Привязанные карты</h2>
+			<div class="attached-cards">
+				<div class="field selectField">
+					<select data-placeholder="Выберите кредитную карту" class="credit-card-selection">
+						<option value></option>
+						<option value="Visa 12** **** **** 3456">Visa 12** **** **** 3456</option>
+						<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
+						<option value="Mastercard 12** **** **** 3456">Mastercard 12** **** **** 3456</option>
+					</select>
+				</div>
+				<div class="add-new-credit-card-btn card-option">
+					или
+					<div class="new-credit-card-btn-name">
+						Добавить новую карту
+					</div>
+				</div>
 			</div>
-			<div class="add-new-credit-card-btn card-option">
-				или
-				<div class="new-credit-card-btn-name">
-					Добавить новую карту
+			<div class="add-new-credit-card" id="add-new-credit-card">
+				<h2>Добавление новой карты</h2>
+				<div class="new-credit-card-cover">
+					<div class="field credit-card-nmbr">
+						<input type="text" placeholder="ХХХХ-ХХХХ-ХХХХ-ХХХХ" />
+					</div>
+					<div class="field valid-to">
+						<input type="text" placeholder="Срок действия" />
+					</div>
+					<div class="field cvv-code">
+						<input type="text" placeholder="CVV" />
+					</div>
+					<div class="field name">
+						<input type="text" placeholder="Фамилия и имя на карте" />
+					</div>
+					<div class="add-credit-card-btn">
+						<a href="#"><img src="images/credits/credit-cards-types/add-credit-card-btn.png" height="53" width="170" alt="" /></a>
+						<a href="#" class="cancel-btn">Отменить</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="add-new-credit-card" id="add-new-credit-card">
-			<h2>Добавление новой карты</h2>
-			<div class="new-credit-card-cover">
-				<div class="field credit-card-nmbr">
-					<input type="text" placeholder="ХХХХ-ХХХХ-ХХХХ-ХХХХ" />
-				</div>
-				<div class="field valid-to">
-					<input type="text" placeholder="Срок действия" />
-				</div>
-				<div class="field cvv-code">
-					<input type="text" placeholder="CVV" />
+	
+		<div id="billing-account" class="credit-transfer-option-block">
+			<h2>Рассчетный счет</h2>
+			<div class="field bank-name">
+				<input type="text" placeholder="Наименование банка" />
+			</div>
+			<div class="field bank-city">
+				<input type="text" placeholder="Город отделения банка" />
+			</div>
+			<div class="field bik-bank">
+				<input type="text" placeholder="БИК банка" />
+			</div>
+			<div class="field correspondent-account">
+				<input type="text" placeholder="Корреспонденский счет" />
+			</div>
+			<div class="field account-number">
+				<input type="text" placeholder="Номер счета получателя" />
+			</div>
+			<div class="field purpose-of-payment">
+				<textarea placeholder="Назначение платежа (необязательное поле)"></textarea>
+			</div>
+			<div class="field-block">
+				<label>Информация о плательщике</label>
+				<div class="field surname">
+					<input type="text" placeholder="Фамилия" />
 				</div>
 				<div class="field name">
-					<input type="text" placeholder="Фамилия и имя на карте" />
+					<input type="text" placeholder="Имя" />
 				</div>
-				<div class="add-credit-card-btn">
-					<a href="#"><img src="images/credits/credit-cards-types/add-credit-card-btn.png" height="53" width="170" alt="" /></a>
-					<a href="#" class="cancel-btn">Отменить</a>
+				<div class="field patronymic">
+					<input type="text" placeholder="Отчество" />
+				</div>
+				<div class="field address">
+					<input placeholder="Адрес регистрации плательщика" />
 				</div>
 			</div>
+			<div class="field-block">
+				<label>Паспортные данные</label>
+				<div class="field passport-nmbr">
+					<label>Серия и номер паспорта:</label>
+					<input type="text" placeholder="---- ------" />
+				</div>
+				<div class="field passport-date">
+					<label>Дата выдачи паспорта:</label>
+					<input type="text" placeholder="--/--/----" />
+				</div>
+				<div class="field mobile-nmbr">
+					<label>Номер мобильного телефона:</label>
+					<input type="text" placeholder="+7 (---) --- -- --" />
+				</div>
+			</div>
+			<div class="checkboxField">
+				<input type="checkbox" name="acceptContractOffer" />
+				<label for="acceptContractOffer">Я ознакомился с договором оферты</label>
+			</div>
+			<div class="get-credit-btn">
+				<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
+			</div>
 		</div>
-	</div>
 	
-	<div id="billing-account" class="credit-transfer-option-block">
-		<h2>Рассчетный счет</h2>
-		<div class="field bank-name">
-			<input type="text" placeholder="Наименование банка" />
-		</div>
-		<div class="field bank-city">
-			<input type="text" placeholder="Город отделения банка" />
-		</div>
-		<div class="field bik-bank">
-			<input type="text" placeholder="БИК банка" />
-		</div>
-		<div class="field correspondent-account">
-			<input type="text" placeholder="Корреспонденский счет" />
-		</div>
-		<div class="field account-number">
-			<input type="text" placeholder="Номер счета получателя" />
-		</div>
-		<div class="field purpose-of-payment">
-			<textarea placeholder="Назначение платежа (необязательное поле)"></textarea>
-		</div>
-		<div class="field-block">
-			<label>Информация о плательщике</label>
-			<div class="field surname">
-				<input type="text" placeholder="Фамилия" />
-			</div>
-			<div class="field name">
-				<input type="text" placeholder="Имя" />
-			</div>
-			<div class="field patronymic">
-				<input type="text" placeholder="Отчество" />
-			</div>
-			<div class="field address">
-				<input placeholder="Адрес регистрации плательщика" />
-			</div>
-		</div>
-		<div class="field-block">
-			<label>Паспортные данные</label>
-			<div class="field passport-nmbr">
-				<label>Серия и номер паспорта:</label>
-				<input type="text" placeholder="---- ------" />
-			</div>
-			<div class="field passport-date">
-				<label>Дата выдачи паспорта:</label>
-				<input type="text" placeholder="--/--/----" />
+		<div id="yandex-wallet" class="credit-transfer-option-block">
+			<h2>Яндекс кошелек</h2>
+			<div class="field yandex-wallet-nmbr">
+				<input type="text" placeholder="Номер счета Яндекс кошелька" id="wallet-nmbr" />
 			</div>
 			<div class="field mobile-nmbr">
 				<label>Номер мобильного телефона:</label>
-				<input type="text" placeholder="+7 (---) --- -- --" />
+				<input type="text" placeholder="+7 (---) --- -- --" id="mobile-nmbr" />
 			</div>
-		</div>
-		<div class="checkboxField">
-			<input type="checkbox" name="acceptContractOffer" />
-			<label for="acceptContractOffer">Я ознакомился с договором оферты</label>
-		</div>
-		<div class="get-credit-btn">
-			<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
-		</div>
-	</div>
-	
-	<div id="yandex-wallet" class="credit-transfer-option-block">
-		<h2>Яндекс кошелек</h2>
-		<div class="field yandex-wallet-nmbr">
-			<input type="text" placeholder="Номер счета Яндекс кошелька" id="wallet-nmbr" />
-		</div>
-		<div class="field mobile-nmbr">
-			<label>Номер мобильного телефона:</label>
-			<input type="text" placeholder="+7 (---) --- -- --" id="mobile-nmbr" />
-		</div>
-		<div class="get-credit-btn">
-			<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
+			<div class="get-credit-btn">
+				<a href="#"><img src="images/get-credit-btn.png" height="53" width="250" alt="" class="get-credit-btn" /></a>
+			</div>
 		</div>
 	</div>
 </div>

@@ -132,7 +132,7 @@ var chooseCreditTransferOption = {
 			var creditOption = $(this).val();
 			
 			$("div.credit-transfer-option-block").hide();
-			$("div#" + creditOption).css('display', 'inline-block');
+			$("div#" + creditOption).css('display', 'block');
 		})
 	}
 }
