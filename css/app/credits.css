@@ -334,6 +334,15 @@ div.new-credit-card-cover div.add-credit-card-btn {
 	margin-top: 18px;
 	text-align: center;
 }
+div.new-credit-card-cover div.add-credit-card-btn a.cancel-btn {
+	color: #CDA349;
+	display: block;
+	font-size: 12px;
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+}
+div.new-credit-card-cover div.add-credit-card-btn a.cancel-btn:hover { text-decoration: none; }
 
 /*---- billing-account ----*/
 div.credit-transfer-block div.credit-transfer-option-block div.field {

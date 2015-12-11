@@ -142,5 +142,8 @@ var addNewCreditCard = {
 		$("div.new-credit-card-btn-name").click(function() {
 			$("div#add-new-credit-card").css('display', 'block');
 		})
+		$("a.cancel-btn").click(function() {
+			$("div#add-new-credit-card").css('display', 'none');
+		})
 	}
 }
