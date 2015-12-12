@@ -90,6 +90,7 @@ function initTransferForms(transfer_form_selected) {
 				} else { //success@requestId@resendTimeout
 					var params = data.split(messages["ajax.csv.delimiter"]);
 					var requestId = params[1];
+					$("#smsForm input:text:visible:first").focus();
 					$('[data-popup="popup-sms"]').fadeIn(350);
 				}
 			}

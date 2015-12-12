@@ -140,7 +140,11 @@ var chooseCreditTransferOption = {
 var addNewCreditCard = {
 	init: function() {
 		$("div.new-credit-card-btn-name").click(function() {
-			$("div#add-new-credit-card").css('display', 'block');
+			if (!$("div#add-new-credit-card").is(":visible")) {
+				$("div#add-new-credit-card").css('display', 'block');
+			} else {
+				$("div#add-new-credit-card").css('display', 'none');
+			}
 		})
 		$("a.cancel-btn").click(function() {
 			$("div#add-new-credit-card").css('display', 'none');
