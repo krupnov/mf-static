@@ -10,11 +10,12 @@ $(document).ready(function() {
 	var initialAmount = document.getElementById("initial-amount");
 	initialAmount.textContent = numberWithSpaces(initialAmount.textContent);
 	
-	
 	$("#loan-period").text(moment(localStartDate).format(messages["date.pattern"]) + " - "
 			+ moment(localEndDate).format(messages["date.pattern"]));
 	var debt = document.getElementById("debt");
-	debt.textContent = numberWithSpaces(debt.textContent);
+	if (canRefund) {
+		debt.textContent = numberWithSpaces(debt.textContent);
+	}
 	if (currentLoan) {
 		setInterval(function() {
 			$.ajax({
@@ -27,6 +28,7 @@ $(document).ready(function() {
 					if (data.canRefund) {
 						$("#debt-div").show("slow");
 						refundButton.show("slow");
+						debt.textContent = numberWithSpaces(data.debt) + ' руб.';
 					} else {
 						$("#debt-div").hide("slow");
 						refundButton.hide("slow");
@@ -36,7 +38,6 @@ $(document).ready(function() {
 					} else {
 						$("#archive").hide("slow");
 					}
-					debt.textContent = numberWithSpaces(data.debt) + ' руб.';
 				},
 				error: function() {
 					location.reload(true);
