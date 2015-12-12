@@ -70,7 +70,7 @@ function initTransferForms(transfer_form_selected) {
 		$('[data-transfer-form="' + targeted_form_class + '"]').submit();
 		e.preventDefault();
 	});
-	initCreditTransferOption($('[data-transfer-form="' + transfer_form_selected + '"]').parent());
+	initCreditTransferOption($('#' + transfer_form_selected));
 	
 	$('[data-transfer-form]').on('submit', function(e) {
 		var form = jQuery(this);
@@ -125,7 +125,7 @@ function initPopup() {
 function initCreditTransferOption(default_credit_option) {
 	
 	$("div.credit-transfer-option-block").hide();
-	default_credit_option.css('display', 'inline-block');
+	default_credit_option.css('display', 'block');
 	
 	$("input[name$='credit-transfer-option']").click(function() {
 		var creditOption = $(this).val();
