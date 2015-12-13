@@ -14,6 +14,7 @@ $(document).ready(function() {
 	initiYandexFormValidation();
 	initCardFormValidation();
 	initSmsForm();
+	initRegisterCard();
 });
 
 function initiYandexFormValidation() {
@@ -76,6 +77,48 @@ function initSmsForm() {
 					location.reload();
 				} else { 
 					window.location = messages["ajax.sms.successredirect"];
+				}
+			}
+		});
+		e.preventDefault();
+	});
+}
+
+function initRegisterCard() {
+	var $form = $("#register-card-form");
+	$("#register-card-ref").click(function(e) {
+		$form.submit();
+		e.preventDefault();
+	});
+	$("#new-credit-card").mask("9999-9999-9999-9999");
+	var $validator = $form.validate({
+		rules: {
+			value: {
+				required: true
+			}
+		},
+		errorPlacement: function(error, element) {
+				error.insertAfter(element);
+		}
+	});
+	$form.on("submit", function(e) {
+		if (!$form.valid()) {
+			return;
+		}
+		$.ajax({
+			type: $form.attr("method"),
+			url: $form.attr("action"),
+			data: $form.serialize(),
+			success: function(data, textStatus) {
+				if (data.length == 0) {
+					var errors = {value : "bla-bla-bla"};
+					$validator.showErrors(errors);
+				} else {
+					$("#selectedCardSynonym option:gt(0)").remove();
+					$.each(data, function(index, value) {
+						$("#selectedCardSynonym").append($("<option></option>")
+								.attr("value", value.synonym).text(value.mask));
+						});
 				}
 			}
 		});
