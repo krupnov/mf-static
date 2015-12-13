@@ -102,7 +102,7 @@ function initTransferForms(transfer_form_selected) {
 			data: $form.serialize(),
 			success: function(data, textStatus) {
 				if (stringStartsWith(data, "<")) { //error in input form
-					$form.parent().replaceWith(data);
+					$('[data-transfer-form-container="' + $form.attr('data-transfer-form') + '"]').replaceWith(data);
 					initTransferForms($form.attr('data-transfer-form'));
 				} else if (stringStartsWith(data, messages["ajax.code.error"])) { //global error
 					location.reload();
