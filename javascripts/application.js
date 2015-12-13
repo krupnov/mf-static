@@ -5,10 +5,6 @@ $(document).on('ready page:load', function() {
 		getCreditSliders.init();
 	}
 	
-	if(($('div.get-credit-block').length > 0)) {
-		getCreditSliders.init();
-	}
-	
 	if(($('div.credit-transfer-block').length > 0)) {
 		chooseCreditTransferOption.init();
 	}
