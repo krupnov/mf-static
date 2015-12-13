@@ -9,12 +9,6 @@ $(document).on('ready page:load', function() {
 		chooseCreditTransferOption.init();
 	}
 	
-	if(($('div.credit-transfer-option-block').length > 0)) {
-		addNewCreditCard.init();
-		
-		$('.credit-card-selection').chosen({disable_search: true});
-	}
-	
 	$('#mobile-nav').sidr({
 		displace: false,
 		onOpen: function(name) {
@@ -129,21 +123,6 @@ var chooseCreditTransferOption = {
 			
 			$("div.credit-transfer-option-block").hide();
 			$("div#" + creditOption).css('display', 'block');
-		})
-	}
-}
-
-var addNewCreditCard = {
-	init: function() {
-		$("div.new-credit-card-btn-name").click(function() {
-			if (!$("div#add-new-credit-card").is(":visible")) {
-				$("div#add-new-credit-card").css('display', 'block');
-			} else {
-				$("div#add-new-credit-card").css('display', 'none');
-			}
-		})
-		$("a.cancel-btn").click(function() {
-			$("div#add-new-credit-card").css('display', 'none');
 		})
 	}
 }

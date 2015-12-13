@@ -12,6 +12,7 @@ $(document).ready(function() {
 		number: messages["typeMismatch.java.lang.Integer"]
 	});
 	initiYandexFormValidation();
+	initCardFormValidation();
 	initSmsForm();
 });
 
@@ -24,6 +25,24 @@ function initiYandexFormValidation() {
 		},
 		errorPlacement: function(error, element) {
 				error.insertAfter(element);
+		}
+	});
+}
+
+function initCardFormValidation() {
+	$("#creadit-card-form").validate({
+		rules: {
+			selectedCardSynonym: {
+				required: true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.is(":hidden")) {
+				element.next().parent().append(error);
+			}
+			else {
+				error.insertAfter(element);
+			}
 		}
 	});
 }
@@ -66,25 +85,25 @@ function initSmsForm() {
 
 function initTransferForms(transfer_form_selected) {
 	$('[data-transfer-form-send]').on('click', function(e) {
-		var targeted_form_class = jQuery(this).attr('data-transfer-form-send');
+		var targeted_form_class = $(this).attr('data-transfer-form-send');
 		$('[data-transfer-form="' + targeted_form_class + '"]').submit();
 		e.preventDefault();
 	});
 	initCreditTransferOption($('#' + transfer_form_selected));
 	
 	$('[data-transfer-form]').on('submit', function(e) {
-		var form = jQuery(this);
-		if (!form.valid()) {
+		var $form = $(this);
+		if (!$form.valid()) {
 			return;
 		}
 		$.ajax({
-			type: form.attr("method"),
-			url: form.attr("action"),
-			data: form.serialize(),
+			type: $form.attr("method"),
+			url: $form.attr("action"),
+			data: $form.serialize(),
 			success: function(data, textStatus) {
 				if (stringStartsWith(data, "<")) { //error in input form
-					form.parent().replaceWith(data);
-					initTransferForms(form.attr('data-transfer-form'));
+					$form.parent().replaceWith(data);
+					initTransferForms($form.attr('data-transfer-form'));
 				} else if (stringStartsWith(data, messages["ajax.code.error"])) { //global error
 					location.reload();
 				} else { //success@requestId@resendTimeout
@@ -97,6 +116,10 @@ function initTransferForms(transfer_form_selected) {
 		});
 		e.preventDefault();
 	});
+	
+	addNewCreditCard.init();
+	$('.credit-card-selection').chosen({disable_search: true});
+	$.validator.setDefaults({ ignore: ":hidden:not(select)" });
 }
 
 function initPopup() {
@@ -134,4 +157,19 @@ function initCreditTransferOption(default_credit_option) {
 		$("div.credit-transfer-option-block").hide();
 		$("div#" + creditOption).css('display', 'block');
 	})
+}
+
+var addNewCreditCard = {
+	init: function() {
+		$("div.new-credit-card-btn-name").click(function() {
+			if (!$("div#add-new-credit-card").is(":visible")) {
+				$("div#add-new-credit-card").css('display', 'block');
+			} else {
+				$("div#add-new-credit-card").css('display', 'none');
+			}
+		})
+		$("a.cancel-btn").click(function() {
+			$("div#add-new-credit-card").css('display', 'none');
+		})
+	}
 }
