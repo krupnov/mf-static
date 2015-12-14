@@ -12,6 +12,7 @@ $(document).ready(function() {
 		number: messages["typeMismatch.java.lang.Integer"]
 	});
 	initiYandexFormValidation();
+	initBillingAccountFormValidation();
 	initCardFormValidation();
 	initSmsForm();
 	initRegisterCard();
@@ -22,6 +23,34 @@ function initiYandexFormValidation() {
 		rules: {
 			yandexAccount: {
 				required: true
+			}
+		},
+		errorPlacement: function(error, element) {
+				error.insertAfter(element);
+		}
+	});
+}
+
+function initBillingAccountFormValidation() {
+	$("#bankBIK").mask("999999999");
+	$("#billing-account-form").validate({
+		rules: {
+			bankBIK: {
+				required: true
+			},
+			bankName: {
+				required: true
+			},
+			bankCity: {
+				required: true
+			},
+			bankCorAccount: {
+				required: true,
+				number: true
+			},
+			custAccount: {
+				required: true,
+				number: true
 			}
 		},
 		errorPlacement: function(error, element) {
@@ -111,7 +140,7 @@ function initRegisterCard() {
 			data: $form.serialize(),
 			success: function(data, textStatus) {
 				if (data.length == 0) {
-					var errors = {value : "bla-bla-bla"};
+					var errors = {value : messages["validation.field.invalidvalue"] };
 					$validator.showErrors(errors);
 				} else {
 					$("#selectedCardSynonym option:gt(0)").remove();
@@ -119,6 +148,7 @@ function initRegisterCard() {
 						$("#selectedCardSynonym").append($("<option></option>")
 								.attr("value", value.synonym).text(value.mask));
 						});
+					$("#selectedCardSynonym").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 				}
 			}
 		});
