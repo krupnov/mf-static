@@ -148,7 +148,6 @@ function initRegisterCard() {
 						$("#selectedCardSynonym").append($("<option></option>")
 								.attr("value", value.synonym).text(value.mask));
 						});
-					$("#selectedCardSynonym").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 				}
 			}
 		});
