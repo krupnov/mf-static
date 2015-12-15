@@ -148,12 +148,21 @@ function initRegisterCard() {
 						$("#selectedCardSynonym").append($("<option></option>")
 								.attr("value", value.synonym).text(value.mask));
 						});
+					$("#new-credit-card").val("");
+					$("div#add-new-credit-card").hide("fast");
+					showInfoMessage(messages["info.card.registred"]);
 				}
 			}
 		});
 		e.preventDefault();
 	});
 }
+
+function showInfoMessage(text) {
+	$("#info-message").val(text);
+	$('[data-popup="popup-message"]').fadeIn(350);
+}
+
 
 function initTransferForms(transfer_form_selected) {
 	$('[data-transfer-form-send]').on('click', function(e) {
@@ -177,6 +186,8 @@ function initTransferForms(transfer_form_selected) {
 				if (stringStartsWith(data, "<")) { //error in input form
 					$('[data-transfer-form-container="' + $form.attr('data-transfer-form') + '"]').replaceWith(data);
 					initTransferForms($form.attr('data-transfer-form'));
+				} else if (stringStartsWith(data, messages["ajax.code.repeatlater"])) { //retry tomorrow
+					showInfoMessage(messages["info.attempts.exceeded"]);
 				} else if (stringStartsWith(data, messages["ajax.code.error"])) { //global error
 					location.reload();
 				} else { //success@requestId@resendTimeout
@@ -236,13 +247,14 @@ var addNewCreditCard = {
 	init: function() {
 		$("div.new-credit-card-btn-name").click(function() {
 			if (!$("div#add-new-credit-card").is(":visible")) {
-				$("div#add-new-credit-card").css('display', 'block');
+				$("div#add-new-credit-card").show("fast");
+				$("#new-credit-card").focus();
 			} else {
-				$("div#add-new-credit-card").css('display', 'none');
+				$("div#add-new-credit-card").hide("fast");
 			}
 		})
 		$("a.cancel-btn").click(function() {
-			$("div#add-new-credit-card").css('display', 'none');
+			$("div#add-new-credit-card").hide("fast");
 		})
 	}
 }
