@@ -32,11 +32,21 @@ function initiYandexFormValidation() {
 }
 
 function initBillingAccountFormValidation() {
-	$("#bankBIK").mask("999999999");
+	$("#bankBIK").on("input", function () {
+		if ($(this).val().length == 9) {
+			var bankInfo = bikDictionary[$(this).val()];
+			if (bankInfo != null) {
+				$("#bankName").val(bankInfo.name);
+				$("#bankCity").val(bankInfo.city);
+				$("#bankCorAccount").val(bankInfo.korAc);
+			}
+		}
+	});
 	$("#billing-account-form").validate({
 		rules: {
 			bankBIK: {
-				required: true
+				required: true,
+				number: true
 			},
 			bankName: {
 				required: true
