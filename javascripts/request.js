@@ -226,6 +226,7 @@ function initCreditTransferOption(default_credit_option) {
 		
 		$("div.credit-transfer-option-block").hide();
 		$("div#" + creditOption).css('display', 'block');
+		$("div#" + creditOption + " input:enabled:visible:not([readonly]):first").focus();
 	})
 }
 
