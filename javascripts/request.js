@@ -216,30 +216,6 @@ function initTransferForms(transfer_form_selected) {
 	$.validator.setDefaults({ ignore: ":hidden:not(select)" });
 }
 
-function initPopup() {
-	//----- ESCAPE
-	$(document).keyup(function(e) {
-		if (e.keyCode == 27) { // escape key maps to keycode `27`
-			if ($('[data-popup]:visible').length) {
-				$('[data-popup-close]:visible').click();
-			}
-		}
-	});
-	//----- OPEN
-	$('[data-popup-open]').on('click', function(e)  {
-		var targeted_popup_class = jQuery(this).attr('data-popup-open');
-		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
-		e.preventDefault();
-	});
- 
-	//----- CLOSE
-	$('[data-popup-close]').on('click', function(e)  {
-		var targeted_popup_class = jQuery(this).attr('data-popup-close');
-		$('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
-		e.preventDefault();
-	});
-};
-
 function initCreditTransferOption(default_credit_option) {
 	
 	$("div.credit-transfer-option-block").hide();
