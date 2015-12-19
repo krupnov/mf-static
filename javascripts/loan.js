@@ -26,9 +26,10 @@ $(document).ready(function() {
 				success: function(data, textStatus) {
 					loanStateSpan.textContent = data.state;
 					if (data.canRefund) {
+						debt.textContent = numberWithSpaces(data.debt) + ' руб.';
+						fillRefundForm(data.refundForm)
 						$("#debt-div").show("slow");
 						refundButton.show("slow");
-						debt.textContent = numberWithSpaces(data.debt) + ' руб.';
 					} else {
 						$("#debt-div").hide("slow");
 						refundButton.hide("slow");
@@ -46,3 +47,13 @@ $(document).ready(function() {
 		}, 10000);
 	}
 });
+
+function fillRefundForm(refundData) {
+	$("#refundForm").attr("action", refundData.formAction);
+	$("#shopId").val(refundData.shopId);
+	$("#scid").val(refundData.scid);
+	$("#customerNumber").val(refundData.customerNumber);
+	$("#sum").val(refundData.sum);
+	$("#orderNumber").val(refundData.orderNumber);
+	$("#paymentType").val(refundData.paymentType);
+};
