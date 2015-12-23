@@ -143,6 +143,9 @@ function initAjaxSubmit() {
 			type: $form.attr("method"),
 			url: $form.attr("action"),
 			data: $form.serialize(),
+			error: function(xmlHttpRequest, textStatus, errorThrown) {
+				location.reload();
+			},
 			success: function(data, textStatus) {
 				if (data != null && stringStartsWith(data, "<")) { //invalid form
 					$form.replaceWith(data);
