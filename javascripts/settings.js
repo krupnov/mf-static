@@ -129,6 +129,7 @@ function initValidation() {
 $(document).ready(function() {
 	initAjaxSubmit();
 	initValidation();
+	enableHeartBeat(heartBeatUrl);
 });
 
 function initAjaxSubmit() {
@@ -143,8 +144,8 @@ function initAjaxSubmit() {
 			type: $form.attr("method"),
 			url: $form.attr("action"),
 			data: $form.serialize(),
-			error: function(xmlHttpRequest, textStatus, errorThrown) {
-				location.reload();
+			error: function() {
+				location.reload(true);
 			},
 			success: function(data, textStatus) {
 				if (data != null && stringStartsWith(data, "<")) { //invalid form

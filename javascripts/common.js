@@ -18,6 +18,22 @@ function stringStartsWith(string, prefix) {
 	return !string.indexOf(prefix);
 }
 
+function enableHeartBeat(url) {
+	setInterval(function() {
+		$.ajax({
+			type: "GET",
+			url: url,
+			global: false,
+			contentType: "application/json;charset=UTF-8",
+			success: function(data, textStatus) {
+				if (data != null && stringStartsWith(data, "<")) {
+					location.reload(true);
+				}
+			}
+		});
+	}, 10000);
+}
+
 var passwordMatcher = function(value, element) {
 	var password = $("#password").val();
 	var confirmPassword = $("#repeatPassword").val();
