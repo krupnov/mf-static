@@ -348,21 +348,19 @@ div.credit-transfer-block div.credit-transfer-option-block div.field {
 }
 div.credit-transfer-block div#billing-account div.field input { width: 100%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.bank-name { max-width: 300px; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.bank-city {
-	max-width: 180px;
+	max-width: 500px;
 	margin-left: 20px;
 }
 div.credit-transfer-block div.credit-transfer-option-block div.bik-bank {
 	max-width: 180px;
-	margin-left: 20px;
 }
+div.credit-transfer-block div.credit-transfer-option-block div.bank-name,
 div.credit-transfer-block div.credit-transfer-option-block div.correspondent-account,
 div.credit-transfer-block div.credit-transfer-option-block div.account-number {
-	max-width: 340px;
+	max-width: 700px;
 }
-div.credit-transfer-block div.credit-transfer-option-block div.account-number { margin-left: 20px; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment { max-width: 700px; }
 div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment textarea {
