@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var refundButton = $("#refund");
 	var initialAmount = document.getElementById("initial-amount");
 	initialAmount.textContent = numberWithSpaces(initialAmount.textContent);
+	convertToLocalDate(messages["date.pattern"]);
 	
 	var debt = document.getElementById("debt");
 	if (canRefund) {
