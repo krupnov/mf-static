@@ -2,16 +2,12 @@
  * 
  */
 $(document).ready(function() {
-	
-	var localStartDate = moment(loanStartDate).toDate();
-	var localEndDate = moment(loanEndDate).toDate();
+	setRequestStartEndDates(loanStartDate, loanEndDate);
 	var loanStateSpan = document.getElementById("loan-state");
 	var refundButton = $("#refund");
 	var initialAmount = document.getElementById("initial-amount");
 	initialAmount.textContent = numberWithSpaces(initialAmount.textContent);
 	
-	$("#loan-period").text(moment(localStartDate).format(messages["date.pattern"]) + " - "
-			+ moment(localEndDate).format(messages["date.pattern"]));
 	var debt = document.getElementById("debt");
 	if (canRefund) {
 		debt.textContent = numberWithSpaces(debt.textContent);
@@ -35,6 +31,7 @@ $(document).ready(function() {
 						refundButton.hide("slow");
 					}
 					if (data.canArchive) {
+						setRequestStartEndDates(data.startDate, data.endDate);
 						$("#archive").show("slow");
 					} else {
 						$("#archive").hide("slow");
@@ -47,6 +44,13 @@ $(document).ready(function() {
 		}, 10000);
 	}
 });
+
+function setRequestStartEndDates(startDate, endDate) {
+	var localStartDate = moment(startDate).toDate();
+	var localEndDate = moment(endDate).toDate();
+	$("#loan-period").text(moment(localStartDate).format(messages["date.pattern"]) + " - "
+			+ moment(localEndDate).format(messages["date.pattern"]));
+}
 
 function fillRefundForm(refundData) {
 	$("#refundForm").attr("action", refundData.formAction);
