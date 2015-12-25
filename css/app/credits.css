@@ -30,6 +30,11 @@ div.credit-sum span, div.to-pay span { font-size: 36px; }
 div.settled span { color: #00a651; }
 div.loan-balance span { color: #ed1c24; }
 
+div.credit-status-block {
+	border-bottom: 2px dashed #ffe89b;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 div.credit-status-block-content { position: relative; }
 div.credit-status-block-content div.pay-btn {
 	position: absolute;
