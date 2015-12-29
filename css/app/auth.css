@@ -46,6 +46,11 @@ div.login-block h2 {
 	text-transform: uppercase;
 }
 
+div.login-block div.resend {
+	margin-top: 20px;
+	text-align: center;
+}
+
 div.login-block img.email-confirmed {
 	
 }
