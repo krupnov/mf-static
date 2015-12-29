@@ -15,8 +15,53 @@ $(document).ready(function() {
 	initBillingAccountFormValidation();
 	initCardFormValidation();
 	initSmsForm();
+	initResendSmsForm();
 	initRegisterCard();
 });
+
+var resendSmsRef = "#resendSmsRef";
+var messageHolder = "#resendSmsMessageHolder";
+
+function initResendSmsForm() {
+	var $form = $("#resendSmsForm");
+	$(resendSmsRef).click(function(e) {
+		e.preventDefault();
+		$form.submit();
+	});
+	$form.submit(function(ev) {
+		$.ajax({
+			type: $form.attr("method"),
+			url: $form.attr("action"),
+			data: $form.serialize(),
+			success: function(data, textStatus) {
+				if (data == messages["ajax.code.error"]) {
+					location.reload();
+				} else {
+					resendSmsTimeout = data;
+					$(resendSmsRef).hide();
+					$(messageHolder).show("slow")
+					$(messageHolder).text(messages["info.loan.resendsms.pattern"].replace("%s", resendSmsTimeout.toString()));
+					initResendSmsTimer(resendSmsRef, messageHolder);
+				}
+			}
+		});
+		
+		ev.preventDefault();
+	});
+}
+
+function initResendSmsTimer(resendSmsRef, messageHolder) {
+	var interval = setInterval(function() {
+		resendSmsTimeout-- ;
+		var message = messages["info.loan.resendsms.pattern"].replace("%s", resendSmsTimeout.toString());
+		$(messageHolder).text(message);
+		if (resendSmsTimeout == 0) {
+			clearInterval(interval);
+			$(messageHolder).hide()
+			$(resendSmsRef).show("slow");
+		}
+	}, 1000);
+}
 
 function initiYandexFormValidation() {
 	$("#yandex-form").validate({
@@ -169,7 +214,7 @@ function initRegisterCard() {
 }
 
 function showInfoMessage(text) {
-	$("#info-message").val(text);
+	$("#info-message").text(text);
 	$('[data-popup="popup-message"]').fadeIn(350);
 }
 
@@ -205,6 +250,7 @@ function initTransferForms(transfer_form_selected) {
 					var requestId = params[1];
 					$('[data-popup="popup-sms"]').fadeIn(350);
 					$("#smsForm input:text:visible:first").focus();
+					initResendSmsTimer(resendSmsRef, messageHolder);
 				}
 			}
 		});
