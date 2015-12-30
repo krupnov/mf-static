@@ -2,6 +2,10 @@
  * 
  */
 $(document).ready(function() {
+	jQuery.extend(jQuery.validator.messages, {
+		required: messages["org.hibernate.validator.constraints.NotEmpty.message"]
+	});
+	initPopup();
 	setRequestStartEndDates(loanStartDate, loanEndDate);
 	var loanStateSpan = document.getElementById("loan-state");
 	var refundButton = $("#refund");
@@ -44,7 +48,37 @@ $(document).ready(function() {
 			}); 
 		}, 10000);
 	}
+	
+	initRefundPopup();
 });
+
+function initRefundPopup() {
+	$("#initRefund").submit(function(e) {
+		$('[data-popup="popup-refund"]').fadeIn(350);
+		$('.credit-card-selection').chosen({disable_search: true});
+		e.preventDefault();
+	});
+	initRefundFormValidation();
+}
+
+function initRefundFormValidation() {
+	$.validator.setDefaults({ ignore: ":hidden:not(select)" });
+	$("#refundForm").validate({
+		rules: {
+			paymentType: {
+				required: true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.is(":hidden")) {
+				element.next().parent().append(error);
+			}
+			else {
+				error.insertAfter(element);
+			}
+		}
+	});
+}
 
 function setRequestStartEndDates(startDate, endDate) {
 	var localStartDate = moment(startDate).toDate();
@@ -60,5 +94,4 @@ function fillRefundForm(refundData) {
 	$("#customerNumber").val(refundData.customerNumber);
 	$("#sum").val(refundData.sum);
 	$("#orderNumber").val(refundData.orderNumber);
-	$("#paymentType").val(refundData.paymentType);
 };

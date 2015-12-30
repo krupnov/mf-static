@@ -263,6 +263,11 @@ div.credit-transfer-block div.credit-transfer-option-block div.selectField div.c
 	width: 100% !important;
 }
 
+div.popup div.login-block div.selectField div.chosen-container {
+	margin-left: 0px;
+	width: 100% !important;
+}
+
 div.credit-transfer-block div.credit-transfer-option-block div.attached-cards { margin-top: 20px; width: 100%; }
 div.credit-transfer-option-block div.attached-cards div.card-option {
 	color: #25262d;
