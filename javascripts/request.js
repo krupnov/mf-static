@@ -204,6 +204,7 @@ function initRegisterCard() {
 								.attr("value", value.synonym).text(value.mask));
 						});
 					$("#new-credit-card").val("");
+					$('.credit-card-selection').trigger("chosen:updated");
 					$("div#add-new-credit-card").hide("fast");
 					showInfoMessage(messages["info.card.registred"]);
 				}
