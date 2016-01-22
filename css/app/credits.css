@@ -348,27 +348,22 @@ div.credit-transfer-block div.credit-transfer-option-block div.field {
 }
 div.credit-transfer-block div#billing-account div.field input { width: 100%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.bank-name { max-width: 300px; }
+div.credit-transfer-block div.credit-transfer-option-block div.bank-name,
+div.credit-transfer-block div.credit-transfer-option-block div.bank-city,
+div.credit-transfer-block div.credit-transfer-option-block div.bik-bank { max-width: 220px; width: 31.428571%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.bank-city {
-	max-width: 180px;
-	margin-left: 20px;
-}
-div.credit-transfer-block div.credit-transfer-option-block div.bik-bank {
-	max-width: 180px;
-	margin-left: 20px;
-}
+div.credit-transfer-block div.credit-transfer-option-block div.bank-city,
+div.credit-transfer-block div.credit-transfer-option-block div.bik-bank,
+div.credit-transfer-block div.credit-transfer-option-block div.account-number,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.name,
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.patronymic { margin-left: 2.857143%; }
+
 div.credit-transfer-block div.credit-transfer-option-block div.correspondent-account,
-div.credit-transfer-block div.credit-transfer-option-block div.account-number {
-	max-width: 340px;
-}
-div.credit-transfer-block div.credit-transfer-option-block div.account-number { margin-left: 20px; }
+div.credit-transfer-block div.credit-transfer-option-block div.account-number { max-width: 340px; width: 48.571429%; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment { max-width: 700px; }
-div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment textarea {
-	resize: none;
-	width: 100%;
-}
+div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment textarea { resize: none; width: 100%; }
+
 div.credit-transfer-block div.credit-transfer-option-block div.field-block label {
 	display: block;
 	font-family: 'Roboto', sans-serif;
@@ -376,25 +371,17 @@ div.credit-transfer-block div.credit-transfer-option-block div.field-block label
 	font-weight: 300;
 	margin-top: 26px;
 }
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field { max-width: 220px; }
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field { max-width: 220px; width: 31.428571%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.name,
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.patronymic {
-	margin-left: 20px;
-}
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.address { max-width: 700px; }
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.address { max-width: 100%; width: 100%; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-nmbr,
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-date,
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.mobile-nmbr {
-	max-width: 100%;
-	width: 100%;
-}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.mobile-nmbr { max-width: 100%; width: 100%; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field label,
-div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field input {
-	display: inline-block;
-}
+div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field input { display: inline-block; }
+
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.passport-nmbr input {
 	max-width: 140px;
 	width: 100%;

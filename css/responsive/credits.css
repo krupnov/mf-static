@@ -43,6 +43,58 @@
 	div.credit-calculation div.get-credit-btn { margin-top: 10px; }
 }
 
+@media only screen and (max-width: 767px) {
+	div.credit-transfer-block div.credit-transfer-options label > input + img { padding: 10% 20%; }
+}
+
+@media only screen and (max-width: 700px) {
+	div.credit-transfer-block div.credit-transfer-option-block div.field,
+	div.credit-transfer-block div.credit-transfer-option-block div.field-block div.field {
+		max-width: 100%;
+		width: 100%;
+		margin-left: 0px;
+	}
+	
+	div.credit-transfer-option-block div.attached-cards div.field {
+		margin-top: 0px;
+		max-width: 340px;
+		width: 48.571429%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	div.credit-transfer-option-block div.attached-cards div.field {
+		margin-top: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+	div.credit-transfer-option-block div.attached-cards div.card-option {
+		height: 20px;
+		line-height: 20px;
+		margin-left: 0;
+		max-width: 100%;
+		text-align: center;
+		width: 100%;
+	}
+	div.credit-transfer-option-block div.attached-cards div.card-option div.new-credit-card-btn-name {
+		margin: 0 auto; width: 100%;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card div.new-credit-card-cover {
+		padding: 28px 12.256267%;
+	}
+	
+	div.credit-transfer-block div.credit-transfer-option-block div.add-new-credit-card div.new-credit-card-cover div.field {
+		margin-left: 0px;
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	div.credit-transfer-block div.credit-transfer-option-block div.yandex-wallet-nmbr input { width: 100%; }
+}
+
 @media (max-width: 432px) {
 	div.get-credit-block div.promo-slider div.input-value { text-align: center; }
 	div.get-credit-block div.promo-slider div.input-value label { display: block; padding-bottom: 10px; width: 100%; }
@@ -52,4 +104,9 @@
 	div.credit-calculation div.calculation-fields label { width: 100%; }
 	div.credit-calculation div.get-credit-btn { width: 100%; }
 	div.credit-calculation div.get-credit-btn img { width: 100%; height: auto; }
+}
+
+@media only screen and (max-width: 369px) {
+	div.credit-transfer-option-block div.get-credit-btn img,
+	div.new-credit-card-cover div.add-credit-card-btn img { width: 100%; height: auto; }
 }
