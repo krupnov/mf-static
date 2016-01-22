@@ -17,8 +17,7 @@ var dateFormatChecker = function(value, element) {
 	return this.optional(element) || birthday.isValid();
 };
 
-$(document).ready(function() {
-	
+function initValidation() {
 	var phoneMask = messages["phonenumber.mask"];
 	$("#passport\\.seriaAndNumber").mask("9999 № 999999");
 	$("#job\\.phone\\.phoneNumber").mask(phoneMask);
@@ -125,4 +124,39 @@ $(document).ready(function() {
 			}
 		}
 	});
+}
+
+$(document).ready(function() {
+	initAjaxSubmit();
+	initValidation();
+	enableHeartBeat(heartBeatUrl);
 });
+
+function initAjaxSubmit() {
+	initLoadingDiv();
+	initPopup();
+	var $form = $("#privateDataForm");
+	$form.on("submit", function(e) {
+		if (!$form.valid()) {
+			return;
+		}
+		$.ajax({
+			type: $form.attr("method"),
+			url: $form.attr("action"),
+			data: $form.serialize(),
+			error: function() {
+				location.reload(true);
+			},
+			success: function(data, textStatus) {
+				if (data != null && stringStartsWith(data, "<")) { //invalid form
+					$form.replaceWith(data);
+					initAjaxSubmit();
+					initValidation();
+				} else {
+					$('[data-popup="popup-message"]').fadeIn(350);
+				}
+			}
+		});
+		e.preventDefault();
+	});
+};

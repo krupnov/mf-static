@@ -30,6 +30,11 @@ div.credit-sum span, div.to-pay span { font-size: 36px; }
 div.settled span { color: #00a651; }
 div.loan-balance span { color: #ed1c24; }
 
+div.current-credit {
+	border-bottom: 2px dashed black;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 div.credit-status-block-content { position: relative; }
 div.credit-status-block-content div.pay-btn {
 	position: absolute;
@@ -254,6 +259,11 @@ div.credit-transfer-block div.credit-transfer-option-block div.get-credit-btn { 
 /*---- credit-cards ----*/
 div.credit-transfer-block div.credit-transfer-option-block div.selectField { margin-top: 0px; max-width: 340px; }
 div.credit-transfer-block div.credit-transfer-option-block div.selectField div.chosen-container {
+	margin-left: 0px;
+	width: 100% !important;
+}
+
+div.popup div.login-block div.selectField div.chosen-container {
 	margin-left: 0px;
 	width: 100% !important;
 }
