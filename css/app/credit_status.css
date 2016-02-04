@@ -1,0 +1,35 @@
+table { border: 0; width: 100%; }
+thead th { font-size: 14px; font-weight: 400; padding: 12px 5px 12px 9px; text-align: left; width: 15%; }
+tbody td { font-size: 20px; font-weight: 300; padding: 12px 5px 12px 9px; text-align: left; width: 15%; }
+tbody td a { color: #cda349; font-size: 14px; }
+tbody td a:hover { text-decoration: none; }
+
+thead th:first-child, tbody td:first-child { width: 10%; }
+thead th:last-child, tbody td:last-child { width: 15%; }
+
+
+
+div.list-header, div.credit-info {
+	font-size: 0px;
+	font-weight: 400;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 12px 5px 12px 0px;
+	position: relative;
+	white-space: nowrap;
+}
+div.credit-info { font-weight: 300; }
+
+div.list-header>div, div.credit-info>div { display: inline-block; margin-left: 9px; text-align: left; }
+div.list-header>div { font-size: 14px; }
+div.credit-info>div { font-size: 24px; }
+
+div.loan-number { width: 167px; }
+div.date-of-issue { width: 244px; }
+div.return-date { width: 261px; }
+div.bonus-points { width: 181px; }
+
+div.credit-info div.bonus-points { color: #00a651; }
+div.credit-info div.bonus-points span { font-weight: 500; }
+div.more a { color: #cda349; font-size: 14px; }
+div.more a:hover { text-decoration: none; }
