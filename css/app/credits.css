@@ -358,18 +358,15 @@ div.credit-transfer-block div.credit-transfer-option-block div.field {
 }
 div.credit-transfer-block div#billing-account div.field input { width: 100%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.bank-name,
-div.credit-transfer-block div.credit-transfer-option-block div.bank-city,
-div.credit-transfer-block div.credit-transfer-option-block div.bik-bank { max-width: 220px; width: 31.428571%; }
+div.credit-transfer-block div.credit-transfer-option-block div.bik-bank { max-width: 340px; width: 48.571429%; }
 
-div.credit-transfer-block div.credit-transfer-option-block div.bank-city,
 div.credit-transfer-block div.credit-transfer-option-block div.bank-name,
-div.credit-transfer-block div.credit-transfer-option-block div.account-number,
+div.credit-transfer-block div.credit-transfer-option-block div.bank-city,
+div.credit-transfer-block div.credit-transfer-option-block div.correspondent-account,
+div.credit-transfer-block div.credit-transfer-option-block div.account-number { width: 100%; }
+
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.name,
 div.credit-transfer-block div.credit-transfer-option-block div.field-block div.patronymic { margin-left: 2.857143%; }
-
-div.credit-transfer-block div.credit-transfer-option-block div.correspondent-account,
-div.credit-transfer-block div.credit-transfer-option-block div.account-number { max-width: 340px; width: 48.571429%; }
 
 div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment { max-width: 700px; }
 div.credit-transfer-block div.credit-transfer-option-block div.purpose-of-payment textarea { resize: none; width: 100%; }
