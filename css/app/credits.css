@@ -6,7 +6,7 @@ div.credit-status-block {
 
 div.current-credit-info {
 	display: block;
-	width: 878px;
+	width: 100%;
 }
 div.current-credit-block {
 	display: inline-block;
@@ -19,8 +19,8 @@ div.current-credit-block {
 div.current-credit-block label { display: block; font-size: 14px; font-weight: 500; }
 div.current-credit-block span { display: block; font-size: 24px; font-weight: 300; margin-top: 6px; }
 
-div.credit-sum { width: 360px; }
-div.to-pay { width: 518px; }
+div.credit-sum { max-width: 360px; width: 32.142857%; }
+div.to-pay { max-width: 760px; width: 67.857143%; }
 div.settled { margin-top: 34px; width: 100%; }
 div.loan-balance { width: 216px; }
 div.days-overdue { width: 145px; }
